@@ -3,7 +3,6 @@ import os
 import numpy as np
 import pandas as pd
 import gymnasium as gym
-import cv2
 from pathlib import Path
 
 # Headless-friendly render backend (harmless if unused)

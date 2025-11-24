@@ -3,7 +3,6 @@ from stats.base_statistics import BaseStatistics
 import numpy as np
 import pandas as pd
 import gymnasium as gym
-import cv2
 from pathlib import Path
 
 class IDP_Statistics(BaseStatistics):

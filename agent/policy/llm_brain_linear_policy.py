@@ -54,7 +54,7 @@ class LLMBrain:
             self.model_group = "openai"
             if self.llm_model_name == 'gpt-oss:120b':
                 host_node = socket.gethostname()
-                asurite_id = "apoojar4"
+                asurite_id = "mrajanva"
                 # print(socket.gethostbyname(host_node))
                 # print(ollama_base_url())
                 self.client = OpenAI(

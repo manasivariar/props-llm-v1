@@ -116,7 +116,7 @@ def run_training_loop(
 
     if not warmup_dir:
         warmup_dir = f"{logdir}/warmup"
-        os.makedirs(warmup_dir, exist_ok=True)
+        os.makedirs(warmup_dir, exist_ok=True, mode=0o777)
         agent.random_warmup(world, warmup_dir, warmup_episodes)
     else:
         agent.replay_buffer.load(warmup_dir)
@@ -129,7 +129,7 @@ def run_training_loop(
         # create log dir
         curr_episode_dir = f"{logdir}/episode_{episode}"
         print(f"Creating log directory: {curr_episode_dir}")
-        os.makedirs(curr_episode_dir, exist_ok=True)
+        os.makedirs(curr_episode_dir, exist_ok=True, mode=0o777)
         
         for trial_idx in range(5):
             try:

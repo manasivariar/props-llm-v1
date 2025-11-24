@@ -5,7 +5,7 @@ render_mode: null
 logdir: logs/mountaincar_propsp_baseline
 dim_actions: 3
 dim_states: 2
-max_traj_count: 20
+max_traj_count: 30
 max_traj_length: 200
 max_best_length: 0
 template_dir: agent/policy/templates
@@ -22,4 +22,4 @@ search_step_size: 1.0
 env_desc_file: env_descriptions/mountaincar.j2
 summary_desc_file: summary_descriptions/mountaincardiscrete_summary.j2
 summary: true
-memory_strategy: default
+memory_strategy: best

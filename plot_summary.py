@@ -3,8 +3,9 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import os
 
-LOG_DIR = "ip-logs/IP_traj_70_baseline"
+LOG_DIR = "mcd-logs/MCD_best_5_recent_65"
 main_df = pd.DataFrame()
+max_df = pd.DataFrame()
 for directory in os.listdir(LOG_DIR):
     os.makedirs(f'plots/{LOG_DIR}', exist_ok=True)
     # Read the CSV file
@@ -45,6 +46,9 @@ for directory in os.listdir(LOG_DIR):
     plt.tight_layout()
     plt.savefig(f'plots/{LOG_DIR}/reward_vs_iteration_{directory}.png', dpi=300)
     plt.show()
+    
+    max_row = df.loc[df['Total Reward'].idxmax()]
+    max_df = pd.concat([max_df, max_row.to_frame().T], ignore_index=True)
 
     # # Plot 2: CPU Time and API Time vs Rewards (dual y-axes)
     # fig, ax1 = plt.subplots(figsize=(10, 6))
@@ -91,4 +95,10 @@ print(f"Average Total Reward: {main_df[' Total Reward'].mean():.2f}")
 print(f"Standard Deviation of Total Reward: {main_df[' Total Reward'].std():.2f}")
 print(f"Max Total Reward: {main_df[' Total Reward'].max():.2f}")
 print(f"Min Total Reward: {main_df[' Total Reward'].min():.2f}")
+
+print(f"\n\nAverage Total Reward: {max_df['Total Reward'].mean():.2f}")
+print(f"Standard Deviation of Total Reward: {max_df['Total Reward'].std():.2f}")
+print(f"Max Total Reward: {max_df['Total Reward'].max():.2f}")
+print(f"Min Total Reward: {max_df['Total Reward'].min():.2f}")
+
 # print(f"Total tool")
