@@ -1,0 +1,835 @@
+--- Starting Ollama server on sg009 ---
+--- Assigned Port: 11434 ---
+--- OLLAMA_HOST set to: 0.0.0.0:11434 ---
+--- Checking Ollama status ---
+[GIN] 2025/11/29 - 01:00:03 | 200 |    2.658173ms |       127.0.0.1 | HEAD     "/"
+[GIN] 2025/11/29 - 01:00:03 | 200 |  213.670604ms |       127.0.0.1 | GET      "/api/tags"
+NAME            ID              SIZE      MODIFIED     
+gpt-oss:120b    f7f8e2f8f4e0    65 GB     7 weeks ago     
+gpt-oss:20b     aa4295ac10c3    13 GB     3 months ago    
+qwen3:14b       bdbd181c33f2    9.3 GB    5 months ago    
+=========================================================================
+SLURM Job Array Task: 37 / 40960024
+Parameters from manifest:
+  Random Seed: 2
+  Config: configs/mountaincar/mountaincar_propsp.yaml
+  Log Directory: ablation-logs/mcd-logs/B5R65
+  Summary Flag: false
+  Max Trajectory Count: 65
+  Max Best Length: 5
+=========================================================================
+[GIN] 2025/11/29 - 01:02:45 | 200 |         2m30s |    10.139.126.9 | POST     "/v1/chat/completions"
+[GIN] 2025/11/29 - 01:04:27 | 200 |         1m41s |    10.139.126.9 | POST     "/v1/chat/completions"
+[GIN] 2025/11/29 - 01:05:15 | 200 | 48.460564916s |    10.139.126.9 | POST     "/v1/chat/completions"
+[GIN] 2025/11/29 - 01:06:15 | 200 | 59.291678769s |    10.139.126.9 | POST     "/v1/chat/completions"
+[GIN] 2025/11/29 - 01:07:51 | 200 |         1m36s |    10.139.126.9 | POST     "/v1/chat/completions"
+[GIN] 2025/11/29 - 01:08:49 | 200 | 57.470440463s |    10.139.126.9 | POST     "/v1/chat/completions"
+[GIN] 2025/11/29 - 01:09:36 | 200 | 46.970046489s |    10.139.126.9 | POST     "/v1/chat/completions"
+[GIN] 2025/11/29 - 01:10:50 | 200 |         1m14s |    10.139.126.9 | POST     "/v1/chat/completions"
+[GIN] 2025/11/29 - 01:11:31 | 200 | 40.328838072s |    10.139.126.9 | POST     "/v1/chat/completions"
+[GIN] 2025/11/29 - 01:12:31 | 200 |          1m0s |    10.139.126.9 | POST     "/v1/chat/completions"
+[GIN] 2025/11/29 - 01:13:42 | 200 |         1m10s |    10.139.126.9 | POST     "/v1/chat/completions"
+[GIN] 2025/11/29 - 01:14:45 | 200 |          1m3s |    10.139.126.9 | POST     "/v1/chat/completions"
+[GIN] 2025/11/29 - 01:15:38 | 200 | 52.815656734s |    10.139.126.9 | POST     "/v1/chat/completions"
+[GIN] 2025/11/29 - 01:17:08 | 200 |         1m30s |    10.139.126.9 | POST     "/v1/chat/completions"
+[GIN] 2025/11/29 - 01:18:32 | 200 |         1m23s |    10.139.126.9 | POST     "/v1/chat/completions"
+[GIN] 2025/11/29 - 01:19:45 | 200 |         1m12s |    10.139.126.9 | POST     "/v1/chat/completions"
+[GIN] 2025/11/29 - 01:20:51 | 200 |          1m5s |    10.139.126.9 | POST     "/v1/chat/completions"
+[GIN] 2025/11/29 - 01:23:00 | 200 |          2m8s |    10.139.126.9 | POST     "/v1/chat/completions"
+[GIN] 2025/11/29 - 01:23:47 | 200 | 47.457769625s |    10.139.126.9 | POST     "/v1/chat/completions"
+[GIN] 2025/11/29 - 01:24:33 | 200 | 45.506124835s |    10.139.126.9 | POST     "/v1/chat/completions"
+[GIN] 2025/11/29 - 01:25:48 | 200 |         1m15s |    10.139.126.9 | POST     "/v1/chat/completions"
+[GIN] 2025/11/29 - 01:27:14 | 200 |         1m25s |    10.139.126.9 | POST     "/v1/chat/completions"
+[GIN] 2025/11/29 - 01:28:13 | 200 | 59.170136247s |    10.139.126.9 | POST     "/v1/chat/completions"
+[GIN] 2025/11/29 - 01:29:38 | 200 |         1m25s |    10.139.126.9 | POST     "/v1/chat/completions"
+[GIN] 2025/11/29 - 01:30:50 | 200 |         1m11s |    10.139.126.9 | POST     "/v1/chat/completions"
+[GIN] 2025/11/29 - 01:31:56 | 200 |          1m5s |    10.139.126.9 | POST     "/v1/chat/completions"
+[GIN] 2025/11/29 - 01:33:13 | 200 |         1m17s |    10.139.126.9 | POST     "/v1/chat/completions"
+[GIN] 2025/11/29 - 01:34:39 | 200 |         1m25s |    10.139.126.9 | POST     "/v1/chat/completions"
+[GIN] 2025/11/29 - 01:36:16 | 200 |         1m37s |    10.139.126.9 | POST     "/v1/chat/completions"
+[GIN] 2025/11/29 - 01:37:35 | 200 |         1m18s |    10.139.126.9 | POST     "/v1/chat/completions"
+[GIN] 2025/11/29 - 01:39:16 | 200 |         1m41s |    10.139.126.9 | POST     "/v1/chat/completions"
+[GIN] 2025/11/29 - 01:40:52 | 200 |         1m36s |    10.139.126.9 | POST     "/v1/chat/completions"
+[GIN] 2025/11/29 - 01:42:59 | 200 |          2m6s |    10.139.126.9 | POST     "/v1/chat/completions"
+[GIN] 2025/11/29 - 01:43:33 | 200 |  33.45577265s |    10.139.126.9 | POST     "/v1/chat/completions"
+[GIN] 2025/11/29 - 01:44:47 | 200 |         1m13s |    10.139.126.9 | POST     "/v1/chat/completions"
+[GIN] 2025/11/29 - 01:45:40 | 200 |  53.27261008s |    10.139.126.9 | POST     "/v1/chat/completions"
+[GIN] 2025/11/29 - 01:46:35 | 200 | 54.940333202s |    10.139.126.9 | POST     "/v1/chat/completions"
+[GIN] 2025/11/29 - 01:47:58 | 200 |         1m22s |    10.139.126.9 | POST     "/v1/chat/completions"
+[GIN] 2025/11/29 - 01:50:10 | 200 |         2m12s |    10.139.126.9 | POST     "/v1/chat/completions"
+[GIN] 2025/11/29 - 01:51:20 | 200 |         1m10s |    10.139.126.9 | POST     "/v1/chat/completions"
+[GIN] 2025/11/29 - 01:52:46 | 200 |         1m25s |    10.139.126.9 | POST     "/v1/chat/completions"
+[GIN] 2025/11/29 - 01:53:48 | 200 |          1m2s |    10.139.126.9 | POST     "/v1/chat/completions"
+--- Overriding config: summary = False ---
+--- Overriding config: max_traj_count = 65 ---
+--- Overriding config: max_best_length = 5 ---
+Connecting to Ollama on sg009:11434
+init done
+Rolling out warmup episode 0...
+Results: [-200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0]
+Result: -200.0
+Rolling out warmup episode 1...
+Results: [-200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0]
+Result: -200.0
+Rolling out warmup episode 2...
+Results: [-200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0]
+Result: -200.0
+Rolling out warmup episode 3...
+Results: [-200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0]
+Result: -200.0
+Rolling out warmup episode 4...
+Results: [-200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0]
+Result: -200.0
+Rolling out warmup episode 5...
+Results: [-200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0]
+Result: -200.0
+Rolling out warmup episode 6...
+Results: [-200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0]
+Result: -200.0
+Rolling out warmup episode 7...
+Results: [-200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0]
+Result: -200.0
+Rolling out warmup episode 8...
+Results: [-200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0]
+Result: -200.0
+Rolling out warmup episode 9...
+Results: [-200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0]
+Result: -200.0
+Rolling out warmup episode 10...
+Results: [-200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0]
+Result: -200.0
+Rolling out warmup episode 11...
+Results: [-200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0]
+Result: -200.0
+Rolling out warmup episode 12...
+Results: [-200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0]
+Result: -200.0
+Rolling out warmup episode 13...
+Results: [-200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0]
+Result: -200.0
+Rolling out warmup episode 14...
+Results: [-200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0]
+Result: -200.0
+Rolling out warmup episode 15...
+Results: [-200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0]
+Result: -200.0
+Rolling out warmup episode 16...
+Results: [-200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0]
+Result: -200.0
+Rolling out warmup episode 17...
+Results: [-200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0]
+Result: -200.0
+Rolling out warmup episode 18...
+Results: [-200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0]
+Result: -200.0
+Rolling out warmup episode 19...
+Results: [-200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0]
+Result: -200.0
+Episode: 0
+Creating log directory: ablation-logs/mcd-logs/B5R65/trial_2/episode_0
+Updating the policy...
+Num trajs in buffer: 20
+Num params in buffer: 20
+response-og: params[0]: 0.0, params[1]: -1.0, params[2]: 0.0, params[3]: 0.0, params[4]: 0.0, params[5]: 1.0, params[6]: 0.0, params[7]: -5.0, params[8]: 0.0  
+I set the policy to depend only on the velocity: action 0 (accelerate left) gets a high score when velocity is negative (score = ‑vel), action 2 (accelerate right) gets a high score when velocity is positive (score = vel), and action 1 is given a large negative bias so it is never selected. This makes the car push left at start (vel = 0 ties, left wins), build momentum, then automatically switch to pushing right once the velocity turns positive, which is the classic strategy for solving MountainCar and should reduce the episode length toward the target reward of around –120.
+response: params[0]: 0.0, params[1]: -1.0, params[2]: 0.0, params[3]: 0.0, params[4]: 0.0, params[5]: 1.0, params[6]: 0.0, params[7]: -5.0, params[8]: 0.0  
+[0.0, -1.0, 0.0, 0.0, 0.0, 1.0, 0.0, -5.0, 0.0]
+(3, 3)
+(9,)
+(3, 3)
+Policy updated!
+Rolling out episode 0...
+Results: [-153.0, -87.0, -153.0, -93.0, -152.0, -157.0, -155.0, -169.0, -159.0, -163.0, -165.0, -151.0, -155.0, -154.0, -158.0, -88.0, -157.0, -99.0, -100.0, -152.0]
+1th trial attempt succeeded in training
+Episode: 1
+Creating log directory: ablation-logs/mcd-logs/B5R65/trial_2/episode_1
+Updating the policy...
+Num trajs in buffer: 21
+Num params in buffer: 20
+response-og: params[0]: -1.0, params[1]: -2.0, params[2]: 0.0, params[3]: 0.0, params[4]: 1.0, params[5]: 2.0, params[6]: 0.0, params[7]: -6.0, params[8]: 0.0  
+
+**Explanation:**  
+- **Action 0 (accelerate left):** Score = –1·position – 2·velocity. Both coefficients are negative, so when the car is on the left side (position < 0) or moving left (velocity < 0) this score becomes large, encouraging left acceleration.  
+- **Action 1 (no acceleration):** Score = –6, a strongly negative bias that effectively disables the “do‑nothing” action.  
+- **Action 2 (accelerate right):** Score =  1·position + 2·velocity. Positive coefficients make this score high when the car is on the right side (position > 0) or moving right (velocity > 0).  
+
+With these parameters the policy roughly follows the well‑known “accelerate in the direction of current velocity” strategy, but also uses position to fine‑tune the switch between left and right actions. The left bias (bias 0 = 0) ensures the car starts by pushing left, while the strong positive weight on velocity for the right action allows a timely switch once the velocity becomes positive, leading to a more efficient climb up the hill. This configuration respects the required exploration step size of 1.0 and stays within the allowed range (‑6.0 to 6.0).
+response: params[0]: -1.0, params[1]: -2.0, params[2]: 0.0, params[3]: 0.0, params[4]: 1.0, params[5]: 2.0, params[6]: 0.0, params[7]: -6.0, params[8]: 0.0  
+[-1.0, -2.0, 0.0, 0.0, 1.0, 2.0, 0.0, -6.0, 0.0]
+(3, 3)
+(9,)
+(3, 3)
+Policy updated!
+Rolling out episode 1...
+Results: [-200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0]
+1th trial attempt succeeded in training
+Episode: 2
+Creating log directory: ablation-logs/mcd-logs/B5R65/trial_2/episode_2
+Updating the policy...
+Num trajs in buffer: 22
+Num params in buffer: 21
+response-og: params[0]: -5.0, params[1]: -1.0, params[2]: 0.0, params[3]: 0.0, params[4]: 5.0, params[5]: 1.0, params[6]: 0.0, params[7]: -5.0, params[8]: 0.0
+I set strong positive weight on position for the right‐acceleration action (params[4]=5) and strong negative weight for the left action (params[0]=‑5) so the policy chooses left when far left and right when far right, while still using velocity (params[1] and params[5]) to fine‑tune decisions. The neutral action is given a large negative bias (params[7]=‑5) to keep it unused. This configuration should drive the car more efficiently toward the goal, improving over the previous best reward of –141.
+response: params[0]: -5.0, params[1]: -1.0, params[2]: 0.0, params[3]: 0.0, params[4]: 5.0, params[5]: 1.0, params[6]: 0.0, params[7]: -5.0, params[8]: 0.0
+[-5.0, -1.0, 0.0, 0.0, 5.0, 1.0, 0.0, -5.0, 0.0]
+(3, 3)
+(9,)
+(3, 3)
+Policy updated!
+Rolling out episode 2...
+Results: [-200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0]
+1th trial attempt succeeded in training
+Episode: 3
+Creating log directory: ablation-logs/mcd-logs/B5R65/trial_2/episode_3
+Updating the policy...
+Num trajs in buffer: 23
+Num params in buffer: 22
+response-og: params[0]: 0.0, params[1]: -2.0, params[2]: 0.0, params[3]: 0.0, params[4]: 0.0, params[5]: 2.0, params[6]: 0.0, params[7]: -5.0, params[8]: 0.0
+I kept the same structure as the best known policy (which uses only velocity to decide left/right) but increased the magnitude of the velocity weights: making left acceleration stronger when velocity is negative (params[1] = -2.0) and right acceleration stronger when velocity is positive (params[5] = 2.0). The neutral action remains heavily penalised (bias -5.0) to force continuous acceleration. Stronger velocity‐based decisions should let the car build momentum faster and reach the goal in fewer steps, pushing the episodic reward towards the target around –120.
+response: params[0]: 0.0, params[1]: -2.0, params[2]: 0.0, params[3]: 0.0, params[4]: 0.0, params[5]: 2.0, params[6]: 0.0, params[7]: -5.0, params[8]: 0.0
+[0.0, -2.0, 0.0, 0.0, 0.0, 2.0, 0.0, -5.0, 0.0]
+(3, 3)
+(9,)
+(3, 3)
+Policy updated!
+Rolling out episode 3...
+Results: [-95.0, -153.0, -98.0, -169.0, -96.0, -87.0, -87.0, -90.0, -153.0, -170.0, -163.0, -152.0, -111.0, -167.0, -91.0, -164.0, -151.0, -91.0, -89.0, -86.0]
+1th trial attempt succeeded in training
+Episode: 4
+Creating log directory: ablation-logs/mcd-logs/B5R65/trial_2/episode_4
+Updating the policy...
+Num trajs in buffer: 24
+Num params in buffer: 22
+response-og: params[0]: -1.0, params[1]: -2.0, params[2]: 0.0, params[3]: 0.0, params[4]: 1.0, params[5]: 2.0, params[6]: 0.0, params[7]: -5.0, params[8]: 0.5  
+We keep the “no‑op” action strongly suppressed (bias = -5.0) and give the left (action 0) and right (action 2) scores a linear dependence on both position and velocity:  
+- score₀ = -1.0·pos - 2.0·vel + 0.0, encouraging left thrust when the car is on the left side or moving left.  
+- score₂ = 1.0·pos + 2.0·vel + 0.5, encouraging right thrust when the car is on the right side or moving right, with a small positive bias to break ties in favor of moving right near the centre.  
+This adds a modest position‑based term to the otherwise velocity‑only policy that achieved -123.15, aiming to switch to right acceleration earlier and thus reduce the episode length and improve f(params).
+response: params[0]: -1.0, params[1]: -2.0, params[2]: 0.0, params[3]: 0.0, params[4]: 1.0, params[5]: 2.0, params[6]: 0.0, params[7]: -5.0, params[8]: 0.5  
+[-1.0, -2.0, 0.0, 0.0, 1.0, 2.0, 0.0, -5.0, 0.5]
+(3, 3)
+(9,)
+(3, 3)
+Policy updated!
+Rolling out episode 4...
+Results: [-200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0]
+1th trial attempt succeeded in training
+Episode: 5
+Creating log directory: ablation-logs/mcd-logs/B5R65/trial_2/episode_5
+Updating the policy...
+Num trajs in buffer: 25
+Num params in buffer: 23
+response-og: params[0]: 0.0; params[1]: -2.0; params[2]: 0.0; params[3]: 0.0; params[4]: 1.0; params[5]: 2.0; params[6]: 0.0; params[7]: -5.0; params[8]: 0.0  
+I kept the proven velocity‐based rule (push in the direction of the current velocity) and added a modest positive weight on position for the right action (params[4]=1.0). This gives the policy a bias to choose the right action when the car is already on the right side of the valley, helping it accelerate toward the goal earlier and reducing unnecessary left pushes. The other parameters remain unchanged to preserve the strong velocity‑driven behavior that already achieved a good score. This small positional bias is a typical improvement for MountainCar policies and should move the reward closer to the global optimum around –120.
+response: params[0]: 0.0; params[1]: -2.0; params[2]: 0.0; params[3]: 0.0; params[4]: 1.0; params[5]: 2.0; params[6]: 0.0; params[7]: -5.0; params[8]: 0.0  
+[0.0, -2.0, 0.0, 0.0, 1.0, 2.0, 0.0, -5.0, 0.0]
+(3, 3)
+(9,)
+(3, 3)
+Policy updated!
+Rolling out episode 5...
+Results: [-154.0, -94.0, -86.0, -88.0, -153.0, -87.0, -131.0, -92.0, -87.0, -153.0, -153.0, -153.0, -154.0, -155.0, -161.0, -90.0, -99.0, -88.0, -164.0, -88.0]
+1th trial attempt succeeded in training
+Episode: 6
+Creating log directory: ablation-logs/mcd-logs/B5R65/trial_2/episode_6
+Updating the policy...
+Num trajs in buffer: 26
+Num params in buffer: 23
+response-og: params[0]: -2.0, params[1]: -2.0, params[2]: 0.0, params[3]: 0.0, params[4]: 2.0, params[5]: 2.0, params[6]: 0.0, params[7]: -5.0, params[8]: 0.0  
+I set both position and velocity weights for the “left” (action 0) and “right” (action 2) actions to have the same sign as the corresponding direction: negative weights for the left action so it is favored when the car is on the left side (negative position) or moving left (negative velocity), and positive weights for the right action so it is favored on the right side (positive position) or moving right (positive velocity). The middle action’s bias is set to –5.0 to keep it rarely chosen, letting the car use full thrust in the appropriate direction. This linear policy should more efficiently drive the car toward the goal and ideally achieve episode lengths near the target –120 region.
+response: params[0]: -2.0, params[1]: -2.0, params[2]: 0.0, params[3]: 0.0, params[4]: 2.0, params[5]: 2.0, params[6]: 0.0, params[7]: -5.0, params[8]: 0.0  
+[-2.0, -2.0, 0.0, 0.0, 2.0, 2.0, 0.0, -5.0, 0.0]
+(3, 3)
+(9,)
+(3, 3)
+Policy updated!
+Rolling out episode 6...
+Results: [-200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0]
+1th trial attempt succeeded in training
+Episode: 7
+Creating log directory: ablation-logs/mcd-logs/B5R65/trial_2/episode_7
+Updating the policy...
+Num trajs in buffer: 27
+Num params in buffer: 24
+response-og: params[0]: -1.0, params[1]: -2.0, params[2]: 0.0, params[3]: -1.0, params[4]: 1.0, params[5]: 3.0, params[6]: 0.0, params[7]: -5.0, params[8]: 0.0  
+I shifted the left‑action weight on position to -1 so that when the car starts on the left side (negative position) the left action (push left) gets a positive score and is chosen, providing the initial momentum needed. I also added a small negative velocity weight to the left action (params[3] = -1) so that once the car gains positive velocity the left action becomes less attractive, allowing the policy to switch to rightward acceleration. Finally I increased the right‑action’s velocity weight to 3 (params[5] = 3) to make right pushes more aggressive when the car has positive velocity, helping it climb the right hill faster. All other parameters remain as the best known baseline (neutral bias -5, no bias for left/right) to keep the policy simple and avoid premature selection of the neutral action.
+response: params[0]: -1.0, params[1]: -2.0, params[2]: 0.0, params[3]: -1.0, params[4]: 1.0, params[5]: 3.0, params[6]: 0.0, params[7]: -5.0, params[8]: 0.0  
+[-1.0, -2.0, 0.0, -1.0, 1.0, 3.0, 0.0, -5.0, 0.0]
+(3, 3)
+(9,)
+(3, 3)
+Policy updated!
+Rolling out episode 7...
+Results: [-200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0]
+1th trial attempt succeeded in training
+Episode: 8
+Creating log directory: ablation-logs/mcd-logs/B5R65/trial_2/episode_8
+Updating the policy...
+Num trajs in buffer: 28
+Num params in buffer: 25
+response-og: params[0]: 0.0, params[1]: -2.0, params[2]: 0.0, params[3]: 0.0, params[4]: 2.0, params[5]: 2.0, params[6]: 0.0, params[7]: -5.0, params[8]: 0.0
+I increased the position weight for action 2 (params[4]) from 1 to 2 while keeping the other promising coefficients unchanged. The known good policies use a strong negative velocity weight for action 0 (to push left when moving left) and modest positive weights for action 2 (to accelerate right when positioned far right). Raising the position weight should make the policy favor the right‑accelerate action earlier, potentially reaching the flag in fewer steps and improving the episodic reward toward the global optimum around –120.
+response: params[0]: 0.0, params[1]: -2.0, params[2]: 0.0, params[3]: 0.0, params[4]: 2.0, params[5]: 2.0, params[6]: 0.0, params[7]: -5.0, params[8]: 0.0
+[0.0, -2.0, 0.0, 0.0, 2.0, 2.0, 0.0, -5.0, 0.0]
+(3, 3)
+(9,)
+(3, 3)
+Policy updated!
+Rolling out episode 8...
+Results: [-88.0, -153.0, -125.0, -88.0, -92.0, -151.0, -86.0, -87.0, -154.0, -92.0, -151.0, -157.0, -156.0, -87.0, -105.0, -169.0, -95.0, -155.0, -89.0, -99.0]
+1th trial attempt succeeded in training
+Episode: 9
+Creating log directory: ablation-logs/mcd-logs/B5R65/trial_2/episode_9
+Updating the policy...
+Num trajs in buffer: 29
+Num params in buffer: 25
+response-og: params[0]: 0.0, params[1]: -2.0, params[2]: 0.0, params[3]: 0.0, params[4]: 2.0, params[5]: 3.0, params[6]: 0.0, params[7]: -4.0, params[8]: 0.0  
+I kept the left‑action weights (p0, p1) that already produce a reliable initial “go left” phase, but increased the velocity weight for the right‑action (p5) from 2 to 3 to make the right thrust stronger once the car starts moving forward. The position weight for the right‑action (p4) stays at 2, which was shown to improve performance over smaller values. I also raised the neutral‑action bias (p7) from –5 to –4, giving the “do nothing” action a slightly higher score so the policy can occasionally stay idle, preventing over‑acceleration. These modest adjustments follow the 1.0 exploration step and aim to push the reward closer to the global optimum (~‑120).
+response: params[0]: 0.0, params[1]: -2.0, params[2]: 0.0, params[3]: 0.0, params[4]: 2.0, params[5]: 3.0, params[6]: 0.0, params[7]: -4.0, params[8]: 0.0  
+[0.0, -2.0, 0.0, 0.0, 2.0, 3.0, 0.0, -4.0, 0.0]
+(3, 3)
+(9,)
+(3, 3)
+Policy updated!
+Rolling out episode 9...
+Results: [-156.0, -91.0, -87.0, -87.0, -158.0, -87.0, -157.0, -166.0, -156.0, -156.0, -155.0, -155.0, -154.0, -95.0, -167.0, -153.0, -160.0, -147.0, -160.0, -90.0]
+1th trial attempt succeeded in training
+Episode: 10
+Creating log directory: ablation-logs/mcd-logs/B5R65/trial_2/episode_10
+Updating the policy...
+Num trajs in buffer: 30
+Num params in buffer: 25
+response-og: params[0]: 0, params[1]: -2, params[2]: 0, params[3]: 0, params[4]: 2, params[5]: 3, params[6]: 0, params[7]: -5, params[8]: 0
+I increased the weight on velocity for the “accelerate‑right” action (params[5] from 2 to 3) while keeping the otherwise best‑performing configuration unchanged. This explores whether giving the right‑acceleration action a stronger response to positive velocity speeds up reaching the goal, potentially improving the episodic reward.
+response: params[0]: 0, params[1]: -2, params[2]: 0, params[3]: 0, params[4]: 2, params[5]: 3, params[6]: 0, params[7]: -5, params[8]: 0
+[0.0, -2.0, 0.0, 0.0, 2.0, 3.0, 0.0, -5.0, 0.0]
+(3, 3)
+(9,)
+(3, 3)
+Policy updated!
+Rolling out episode 10...
+Results: [-176.0, -157.0, -153.0, -161.0, -104.0, -91.0, -91.0, -86.0, -143.0, -154.0, -112.0, -168.0, -164.0, -97.0, -157.0, -92.0, -91.0, -87.0, -86.0, -160.0]
+1th trial attempt succeeded in training
+Episode: 11
+Creating log directory: ablation-logs/mcd-logs/B5R65/trial_2/episode_11
+Updating the policy...
+Num trajs in buffer: 31
+Num params in buffer: 25
+response-og: params[0]: -2.0, params[1]: -2.0, params[2]: 0.0, params[3]: 0.0, params[4]: 2.0, params[5]: 2.0, params[6]: 0.0, params[7]: -5.0, params[8]: 0.0  
+I added a negative position weight (‑2) to the left‑action linear term while keeping the velocity weight (‑2) unchanged. This makes the left acceleration more likely when the car is far to the left (position < 0), helping it build momentum early. The right‑action weights and the no‑acceleration bias remain identical to the best‑known policy, preserving its effective right‑push behavior once sufficient speed is gained. This adjustment should reduce episode length compared to the current best.
+response: params[0]: -2.0, params[1]: -2.0, params[2]: 0.0, params[3]: 0.0, params[4]: 2.0, params[5]: 2.0, params[6]: 0.0, params[7]: -5.0, params[8]: 0.0  
+[-2.0, -2.0, 0.0, 0.0, 2.0, 2.0, 0.0, -5.0, 0.0]
+(3, 3)
+(9,)
+(3, 3)
+Policy updated!
+Rolling out episode 11...
+Results: [-200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0]
+1th trial attempt succeeded in training
+Episode: 12
+Creating log directory: ablation-logs/mcd-logs/B5R65/trial_2/episode_12
+Updating the policy...
+Num trajs in buffer: 32
+Num params in buffer: 26
+response-og: params[0]: 0.0; params[1]: -2.0; params[2]: 0.0; params[3]: 0.0; params[4]: 2.0; params[5]: 2.0; params[6]: 0.0; params[7]: -4.0; params[8]: 0.0
+I kept the weights that produced the best known performance (action 2 strong right‑push) and only increased the bias for the “no‑acceleration” action (params[7]) by one step (from –5 to –4). This small change should make the neutral action slightly more likely when appropriate, helping the car build momentum more smoothly while staying close to the proven high‑reward configuration.
+response: params[0]: 0.0; params[1]: -2.0; params[2]: 0.0; params[3]: 0.0; params[4]: 2.0; params[5]: 2.0; params[6]: 0.0; params[7]: -4.0; params[8]: 0.0
+[0.0, -2.0, 0.0, 0.0, 2.0, 2.0, 0.0, -4.0, 0.0]
+(3, 3)
+(9,)
+(3, 3)
+Policy updated!
+Rolling out episode 12...
+Results: [-90.0, -153.0, -93.0, -154.0, -161.0, -162.0, -163.0, -158.0, -156.0, -155.0, -151.0, -92.0, -159.0, -155.0, -166.0, -108.0, -171.0, -174.0, -87.0, -154.0]
+1th trial attempt succeeded in training
+Episode: 13
+Creating log directory: ablation-logs/mcd-logs/B5R65/trial_2/episode_13
+Updating the policy...
+Num trajs in buffer: 33
+Num params in buffer: 27
+response-og: 0.0 -2.0 0.0 0.0 2.0 3.0 0.0 -5.0 0.0
+response: 0.0 -2.0 0.0 0.0 2.0 3.0 0.0 -5.0 0.0
+[0.0, -2.0, 0.0, 0.0, 2.0, 3.0, 0.0, -5.0, 0.0]
+(3, 3)
+(9,)
+(3, 3)
+Policy updated!
+Rolling out episode 13...
+Results: [-155.0, -97.0, -114.0, -157.0, -96.0, -155.0, -90.0, -155.0, -151.0, -92.0, -159.0, -104.0, -156.0, -160.0, -154.0, -89.0, -87.0, -154.0, -154.0, -151.0]
+1th trial attempt succeeded in training
+Episode: 14
+Creating log directory: ablation-logs/mcd-logs/B5R65/trial_2/episode_14
+Updating the policy...
+Num trajs in buffer: 34
+Num params in buffer: 27
+response-og: **params**: 0.0,-1.0,0.0,0.0,2.0,2.0,0.0,-5.0,0.0  
+
+*Explanation*: reduced the left‑action weight on velocity (‑2 → ‑1) to make the left action less dominant after gaining negative speed, encouraging an earlier switch to right acceleration and thus potentially fewer steps to the goal.
+response: **params**: 0.0,-1.0,0.0,0.0,2.0,2.0,0.0,-5.0,0.0  
+[0.0, -1.0, 0.0, 0.0, 2.0, 2.0, 0.0, -5.0, 0.0]
+(3, 3)
+(9,)
+(3, 3)
+Policy updated!
+Rolling out episode 14...
+Results: [-158.0, -103.0, -102.0, -89.0, -152.0, -152.0, -180.0, -114.0, -153.0, -88.0, -95.0, -113.0, -86.0, -160.0, -97.0, -96.0, -93.0, -98.0, -86.0, -153.0]
+1th trial attempt succeeded in training
+Episode: 15
+Creating log directory: ablation-logs/mcd-logs/B5R65/trial_2/episode_15
+Updating the policy...
+Num trajs in buffer: 35
+Num params in buffer: 27
+response-og: params[0]: -1.0, params[1]: -2.0, params[2]: 0.0, params[3]: 0.0, params[4]: 2.0, params[5]: 2.0, params[6]: 0.0, params[7]: -5.0, params[8]: 0.0  
+I kept the successful right‑action weights (2 × position + 2 × velocity) and the strong idle penalty (B1 = -5) that prevented the no‑acceleration action from being chosen.  
+The only change is adding a modest negative position weight to the left‑action (params[0] = -1) while keeping the strong velocity term (-2). This shifts the left/right decision boundary slightly leftward, encouraging the agent to stay in the left‑side “building‑momentum” region a bit longer before switching to the right action. This subtle adjustment is expected to increase the accumulated momentum and reduce the total number of steps needed to reach the flag, moving the reward nearer to the global optimum (~‑120).
+response: params[0]: -1.0, params[1]: -2.0, params[2]: 0.0, params[3]: 0.0, params[4]: 2.0, params[5]: 2.0, params[6]: 0.0, params[7]: -5.0, params[8]: 0.0  
+[-1.0, -2.0, 0.0, 0.0, 2.0, 2.0, 0.0, -5.0, 0.0]
+(3, 3)
+(9,)
+(3, 3)
+Policy updated!
+Rolling out episode 15...
+Results: [-200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0]
+1th trial attempt succeeded in training
+Episode: 16
+Creating log directory: ablation-logs/mcd-logs/B5R65/trial_2/episode_16
+Updating the policy...
+Num trajs in buffer: 36
+Num params in buffer: 28
+response-og: params[0]: -1.0, params[1]: -2.0, params[2]: 0.0, params[3]: 0.0, params[4]: 3.0, params[5]: 3.0, params[6]: 0.0, params[7]: -5.0, params[8]: 1.0  
+We start from the best known policy (params[0]=0, params[1]=‑1, params[4]=2, params[5]=2, bias‑5 on the neutral action) which already drives the car efficiently.  
+- Adding a negative weight on position for the left action (params[0]=‑1) makes the left accelerator more confident when the car is far left, helping it build momentum quicker.  
+- Strengthening the velocity weight for the left action (params[1]=‑2) increases the pull toward “accelerate left” whenever the velocity is negative, reducing wasted neutral steps.  
+- Raising the right‑action weights (params[4]=3, params[5]=3) amplifies the influence of both position and velocity when the car reaches the uphill side, so it pushes harder toward the goal once enough momentum is available.  
+- Keeping the neutral bias strongly negative (‑5) prevents the “do‑nothing” action from being chosen except in pathological states.  
+- Adding a small positive bias for the right action (params[8]=1) gives a final nudge toward the flag once the car is near the goal, potentially cutting a few extra steps.  
+
+These adjustments stay within the allowed range, respect the 1‑decimal precision, and explore a new region of the parameter space while preserving the sensible structure of the original successful policy, aiming to improve the episodic reward beyond the current best (~‑118).
+response: params[0]: -1.0, params[1]: -2.0, params[2]: 0.0, params[3]: 0.0, params[4]: 3.0, params[5]: 3.0, params[6]: 0.0, params[7]: -5.0, params[8]: 1.0  
+[-1.0, -2.0, 0.0, 0.0, 3.0, 3.0, 0.0, -5.0, 1.0]
+(3, 3)
+(9,)
+(3, 3)
+Policy updated!
+Rolling out episode 16...
+Results: [-200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0]
+1th trial attempt succeeded in training
+Episode: 17
+Creating log directory: ablation-logs/mcd-logs/B5R65/trial_2/episode_17
+Updating the policy...
+Num trajs in buffer: 37
+Num params in buffer: 29
+response-og: params[0] = -1.0, params[1] = -1.0, params[2] = 0.0, params[3] = 0.0, params[4] = 3.0, params[5] = 3.0, params[6] = 0.0, params[7] = -5.0, params[8] = 0.0, f = ?
+response: params[0] = -1.0, params[1] = -1.0, params[2] = 0.0, params[3] = 0.0, params[4] = 3.0, params[5] = 3.0, params[6] = 0.0, params[7] = -5.0, params[8] = 0.0, f = ?
+[-1.0, -1.0, 0.0, 0.0, 3.0, 3.0, 0.0, -5.0, 0.0]
+(3, 3)
+(9,)
+(3, 3)
+Policy updated!
+Rolling out episode 17...
+Results: [-200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0]
+1th trial attempt succeeded in training
+Episode: 18
+Creating log directory: ablation-logs/mcd-logs/B5R65/trial_2/episode_18
+Updating the policy...
+Num trajs in buffer: 38
+Num params in buffer: 30
+response-og: params[0]: 0.0, params[1]: -1.0, params[2]: 0.0, params[3]: 0.0, params[4]: 3.0, params[5]: 3.0, params[6]: 0.0, params[7]: -5.0, params[8]: 0.0  
+I increased the position and velocity weights for the “right‑push” action (params[4] and params[5]) from 2 to 3 while keeping the other effective components from the best known configuration unchanged. This should make the policy select the right‑acceleration action more aggressively when the car has enough forward momentum or is far to the right, potentially reaching the goal in fewer steps.
+response: params[0]: 0.0, params[1]: -1.0, params[2]: 0.0, params[3]: 0.0, params[4]: 3.0, params[5]: 3.0, params[6]: 0.0, params[7]: -5.0, params[8]: 0.0  
+[0.0, -1.0, 0.0, 0.0, 3.0, 3.0, 0.0, -5.0, 0.0]
+(3, 3)
+(9,)
+(3, 3)
+Policy updated!
+Rolling out episode 18...
+Results: [-163.0, -153.0, -93.0, -88.0, -92.0, -90.0, -96.0, -153.0, -153.0, -152.0, -154.0, -153.0, -157.0, -154.0, -93.0, -159.0, -91.0, -91.0, -99.0, -92.0]
+1th trial attempt succeeded in training
+Episode: 19
+Creating log directory: ablation-logs/mcd-logs/B5R65/trial_2/episode_19
+Updating the policy...
+Num trajs in buffer: 39
+Num params in buffer: 30
+response-og: params[0]: 0.0, params[1]: -2.0, params[2]: 0.0, params[3]: 0.0, params[4]: 3.0, params[5]: 3.0, params[6]: 0.0, params[7]: -5.0, params[8]: 0.0  
+I kept the bias and neutral‐action weights unchanged because the bias –5 for the “do nothing” action effectively suppresses it, letting the left (action 0) and right (action 2) signals dominate. I set the left‑action velocity weight to –2.0 (stronger than –1) to encourage a more decisive left push when the car is moving left, which helps build momentum early. For the right‑action I increased both position and velocity weights to 3.0 (up from 2.0) so that as soon as the car’s position or velocity become modestly positive, the right action quickly overtakes the –5 bias, accelerating the car out of the valley more efficiently. All other parameters remain zero, matching the successful patterns observed in the best prior runs while exploring a new combination that may reduce the episode length further.
+response: params[0]: 0.0, params[1]: -2.0, params[2]: 0.0, params[3]: 0.0, params[4]: 3.0, params[5]: 3.0, params[6]: 0.0, params[7]: -5.0, params[8]: 0.0  
+[0.0, -2.0, 0.0, 0.0, 3.0, 3.0, 0.0, -5.0, 0.0]
+(3, 3)
+(9,)
+(3, 3)
+Policy updated!
+Rolling out episode 19...
+Results: [-170.0, -154.0, -156.0, -157.0, -87.0, -169.0, -89.0, -153.0, -157.0, -160.0, -167.0, -154.0, -99.0, -87.0, -159.0, -87.0, -156.0, -157.0, -164.0, -190.0]
+1th trial attempt succeeded in training
+Episode: 20
+Creating log directory: ablation-logs/mcd-logs/B5R65/trial_2/episode_20
+Updating the policy...
+Num trajs in buffer: 40
+Num params in buffer: 31
+response-og: [0, -1, 0, 0, 2, 2, 0, -5, 0.5]
+response: [0, -1, 0, 0, 2, 2, 0, -5, 0.5]
+[0.0, -1.0, 0.0, 0.0, 2.0, 2.0, 0.0, -5.0, 0.5]
+(3, 3)
+(9,)
+(3, 3)
+Policy updated!
+Rolling out episode 20...
+Results: [-200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0]
+1th trial attempt succeeded in training
+Episode: 21
+Creating log directory: ablation-logs/mcd-logs/B5R65/trial_2/episode_21
+Updating the policy...
+Num trajs in buffer: 41
+Num params in buffer: 32
+response-og: A promising tweak is to keep the strong right‑acceleration bias (pos = 2, vel = 2) but give the left‑acceleration unit a small position term and slightly up‑weight the velocity term for the right action. One concrete setting that has not been tried yet is:  
+
+**Parameters:** `[-0.5, -1.0, 0.0, 0.0, 2.0, 2.5, 0.0, -5.0, 0.0]`  
+
+These values preserve the effective –5 bias on the “no‑op” action, keep the left‑action bias at zero, but adjust the decision boundary (≈ vel < ‑0.56 · pos) and give the right‑action a bit more velocity sensitivity, which should let the car swing left long enough while switching to right‑acceleration a little earlier, potentially improving the reward closer to the global optimum around –120.
+response: A promising tweak is to keep the strong right‑acceleration bias (pos = 2, vel = 2) but give the left‑acceleration unit a small position term and slightly up‑weight the velocity term for the right action. One concrete setting that has not been tried yet is:  
+[2.0, 2.0]
+1th trial attempt failed with error in training: 
+Updating the policy...
+Num trajs in buffer: 41
+Num params in buffer: 32
+response-og: params[0]: -1.0, params[1]: -1.0, params[2]: 0.0, params[3]: 0.0, params[4]: 2.0, params[5]: 2.0, params[6]: 0.0, params[7]: -5.0, params[8]: 0.0  
+I kept the successful right‑acceleration weights (2, 2) and the strong “do‑nothing” penalty (bias = ‑5).  
+To encourage a more decisive left push at the start, I added a negative position weight to the left‑acceleration action (‑1 for position, ‑1 for velocity). This should make the policy choose “accelerate left” more reliably when the car is at the bottom of the valley, building momentum faster and allowing the right‑acceleration action to dominate sooner, potentially reducing episode length below the current best (~‑118).
+response: params[0]: -1.0, params[1]: -1.0, params[2]: 0.0, params[3]: 0.0, params[4]: 2.0, params[5]: 2.0, params[6]: 0.0, params[7]: -5.0, params[8]: 0.0  
+[-1.0, -1.0, 0.0, 0.0, 2.0, 2.0, 0.0, -5.0, 0.0]
+(3, 3)
+(9,)
+(3, 3)
+Policy updated!
+Rolling out episode 21...
+Results: [-200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0]
+2th trial attempt succeeded in training
+Episode: 22
+Creating log directory: ablation-logs/mcd-logs/B5R65/trial_2/episode_22
+Updating the policy...
+Num trajs in buffer: 42
+Num params in buffer: 33
+response-og: [0.0, -1.0, 0.0, 0.0, 2.0, 2.0, 0.0, -5.0, -1.0]
+response: [0.0, -1.0, 0.0, 0.0, 2.0, 2.0, 0.0, -5.0, -1.0]
+[0.0, -1.0, 0.0, 0.0, 2.0, 2.0, 0.0, -5.0, -1.0]
+(3, 3)
+(9,)
+(3, 3)
+Policy updated!
+Rolling out episode 22...
+Results: [-200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0]
+1th trial attempt succeeded in training
+Episode: 23
+Creating log directory: ablation-logs/mcd-logs/B5R65/trial_2/episode_23
+Updating the policy...
+Num trajs in buffer: 43
+Num params in buffer: 34
+response-og: params[0]: 0; params[1]: -1; params[2]: 0; params[3]: 0; params[4]: 2.5; params[5]: 2.5; params[6]: 0; params[7]: -5; params[8]: 0  
+I kept the left‐action weights that worked well (zero position weight and a modest -1 coefficient on velocity) to ensure early left pushes for momentum. I increased the right‑action weights from 2 to 2.5 for both position and velocity, preserving their positive influence while scaling them up slightly to favor the right action sooner as the car gains speed. The biases remain the same (penalising the noop action and no bias on left/right) to maintain the dynamics that produced the best known reward so far, while exploring a finer resolution in the weight space.
+response: params[0]: 0; params[1]: -1; params[2]: 0; params[3]: 0; params[4]: 2.5; params[5]: 2.5; params[6]: 0; params[7]: -5; params[8]: 0  
+[0.0, -1.0, 0.0, 0.0, 2.5, 2.5, 0.0, -5.0, 0.0]
+(3, 3)
+(9,)
+(3, 3)
+Policy updated!
+Rolling out episode 23...
+Results: [-173.0, -95.0, -152.0, -156.0, -109.0, -94.0, -155.0, -86.0, -152.0, -153.0, -152.0, -90.0, -95.0, -154.0, -163.0, -172.0, -87.0, -153.0, -90.0, -86.0]
+1th trial attempt succeeded in training
+Episode: 24
+Creating log directory: ablation-logs/mcd-logs/B5R65/trial_2/episode_24
+Updating the policy...
+Num trajs in buffer: 44
+Num params in buffer: 35
+response-og: params[0]: 0.0, params[1]: -0.5, params[2]: 0.0, params[3]: 0.0, params[4]: 2.0, params[5]: 1.5, params[6]: 0.0, params[7]: -5.0, params[8]: 0.0  
+I kept the simple structure that has worked well (zero weights for the left and neutral actions, bias -5 for the “no‑push” action) and focused on fine‑tuning the right‑push action. By setting a modest negative weight (‑0.5) on velocity for the left action, the policy is less likely to keep pushing left when the car already has forward momentum. Reducing the velocity weight for the right action from 2.0 to 1.5 should make the switch to “push‑right” depend more on position than on velocity, potentially timing the acceleration better and lowering the total number of steps toward the goal. This explores a nearby region of the promising –118 range while respecting the ±6 bounds and 1‑decimal precision.
+response: params[0]: 0.0, params[1]: -0.5, params[2]: 0.0, params[3]: 0.0, params[4]: 2.0, params[5]: 1.5, params[6]: 0.0, params[7]: -5.0, params[8]: 0.0  
+[0.0, -0.5, 0.0, 0.0, 2.0, 1.5, 0.0, -5.0, 0.0]
+(3, 3)
+(9,)
+(3, 3)
+Policy updated!
+Rolling out episode 24...
+Results: [-155.0, -139.0, -157.0, -154.0, -165.0, -127.0, -87.0, -160.0, -86.0, -87.0, -171.0, -132.0, -101.0, -154.0, -153.0, -87.0, -88.0, -153.0, -98.0, -156.0]
+1th trial attempt succeeded in training
+Episode: 25
+Creating log directory: ablation-logs/mcd-logs/B5R65/trial_2/episode_25
+Updating the policy...
+Num trajs in buffer: 45
+Num params in buffer: 36
+response-og: **Proposed parameters (iteration 26)**  
+```
+0 -1 0 0 3 3 0 -5 0.5
+```
+
+**Why this choice?**  
+- The successful policies we have observed all use a simple two‑action decision boundary (action 1 is never selected because B₁ = –5).  
+- The best‑performing setting so far (reward ≈ –118 steps) uses params [0, –1, 0, 0, 2, 2, 0, –5, 0], which implements the rule `2·pos + 3·vel > 0` → accelerate right, otherwise accelerate left.  
+- To explore a slightly different linear boundary while staying in the same simple “left vs. right” family, I increase the weights for the “right” action (params 4 = 3, 5 = 3). This changes the decision line to `3·pos + 4·vel > 0`, putting a bit more emphasis on both position and velocity.  
+- I keep the left‑action weights unchanged (params 0 = 0, 1 = –1) and the bias for the “do‑nothing” action low (B₁ = –5) so that only actions 0 and 2 compete.  
+- Finally, I add a small positive bias to the right‑action (params 8 = 0.5). This slightly lowers the threshold for switching to the right accelerator, encouraging the car to start the final climb a little earlier without being too aggressive.
+
+This new linear classifier has not been tried before and, based on the pattern of past results, has a good chance of reaching a reward near or better than the current best (~‑118 steps).
+response: **Proposed parameters (iteration 26)**  
+[26.0]
+1th trial attempt failed with error in training: 
+Updating the policy...
+Num trajs in buffer: 45
+Num params in buffer: 36
+response-og: **params[0]: 0.0, params[1]: -1.0, params[2]: 0.0, params[3]: 0.0, params[4]: 2.0, params[5]: 3.0, params[6]: 0.0, params[7]: -5.0, params[8]: 1.0**
+
+The left action now reacts strongly to negative velocity (weight -1.0 on velocity) while the right action places a slightly higher emphasis on both position and especially positive velocity (weights 2.0 × position + 3.0 × velocity). Keeping the neutral bias at ‑5.0 forces the agent to default to “do‑nothing” unless the left or right scores are clearly higher, while a small positive bias (bias = 1.0) for the right action makes “accelerate‑right” kick in a bit earlier once sufficient momentum is achieved. This adjustment shifts the decision boundary to favor left‑ward pushes when the car is moving backward on the left side, and to trigger right‑ward pushes more promptly as soon as the velocity turns positive, which should reduce wasted cycles and improve the overall time to reach the goal.
+response: **params[0]: 0.0, params[1]: -1.0, params[2]: 0.0, params[3]: 0.0, params[4]: 2.0, params[5]: 3.0, params[6]: 0.0, params[7]: -5.0, params[8]: 1.0**
+[0.0, -1.0, 0.0, 0.0, 2.0, 3.0, 0.0, -5.0, 1.0]
+(3, 3)
+(9,)
+(3, 3)
+Policy updated!
+Rolling out episode 25...
+Results: [-200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0]
+2th trial attempt succeeded in training
+Episode: 26
+Creating log directory: ablation-logs/mcd-logs/B5R65/trial_2/episode_26
+Updating the policy...
+Num trajs in buffer: 46
+Num params in buffer: 37
+response-og: params[0]: 0.0; params[1]: -0.9; params[2]: 0.0; params[3]: 0.0; params[4]: 2.0; params[5]: 2.0; params[6]: 0.0; params[7]: -5.0; params[8]: 0.0
+response: params[0]: 0.0; params[1]: -0.9; params[2]: 0.0; params[3]: 0.0; params[4]: 2.0; params[5]: 2.0; params[6]: 0.0; params[7]: -5.0; params[8]: 0.0
+[0.0, -0.9, 0.0, 0.0, 2.0, 2.0, 0.0, -5.0, 0.0]
+(3, 3)
+(9,)
+(3, 3)
+Policy updated!
+Rolling out episode 26...
+Results: [-98.0, -100.0, -153.0, -162.0, -152.0, -94.0, -101.0, -87.0, -87.0, -86.0, -152.0, -152.0, -152.0, -154.0, -94.0, -157.0, -160.0, -103.0, -86.0, -91.0]
+1th trial attempt succeeded in training
+Episode: 27
+Creating log directory: ablation-logs/mcd-logs/B5R65/trial_2/episode_27
+Updating the policy...
+Num trajs in buffer: 47
+Num params in buffer: 37
+response-og: -0.5 -1.0 0.0 0.0 2.0 2.0 0.0 -5.0 0.0  
+Adjust the left‑action position weight to –0.5 while keeping the proven velocity weight (‑1) and right‑action weights (2, 2) unchanged; this subtly encourages left pushes when the car is far left, potentially reducing the total steps needed to reach the goal.
+response: -0.5 -1.0 0.0 0.0 2.0 2.0 0.0 -5.0 0.0  
+[-0.5, -1.0, 0.0, 0.0, 2.0, 2.0, 0.0, -5.0, 0.0]
+(3, 3)
+(9,)
+(3, 3)
+Policy updated!
+Rolling out episode 27...
+Results: [-200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0]
+1th trial attempt succeeded in training
+Episode: 28
+Creating log directory: ablation-logs/mcd-logs/B5R65/trial_2/episode_28
+Updating the policy...
+Num trajs in buffer: 48
+Num params in buffer: 38
+response-og: 
+response: 
+[]
+1th trial attempt failed with error in training: 
+Updating the policy...
+Num trajs in buffer: 48
+Num params in buffer: 38
+response-og: 0
+-1
+0
+0
+2
+2
+0
+-5
+1
+response: 0
+[0.0]
+2th trial attempt failed with error in training: 
+Updating the policy...
+Num trajs in buffer: 48
+Num params in buffer: 38
+response-og: **Proposed parameters (new, never used before)**  
+
+`0.0, -1.0, 1.0, 0.5, 2.0, 2.0, 0.0, -5.0, 0.0`
+
+**Why this set may improve the reward**
+
+1. **Bias terms kept optimal** – The bias vector remains `[B₀, B₁, B₂] = [0, ‑5, 0]`. All successful policies from the dataset use exactly this bias configuration; deviating from it (e.g., setting B₁ = ‑4) caused a large drop in performance, while any non‑zero B₂ or B₀ produced failures.  
+
+2. **Action 0 (accelerate left) unchanged position weight** – `params[0]=0` keeps the score for “accelerate left” independent of position, which was crucial in the best‑performing runs. The velocity weight `params[1]=‑1` still makes the policy push left whenever the car is moving left ( v < 0 ).  
+
+3. **Introducing a mild state‑dependence for Action 1 (coast)** – `params[2]=1.0` and `params[3]=0.5` give a modest positive contribution of position and velocity to the “no‑acceleration” score. Because `B₁` is strongly negative (‑5), the coast action is still only chosen when both the left‑ and right‑action scores are low, which helps the agent to *stay* in a neutral state at the top of the hill instead of overshooting. This subtle tuning can reduce wasted steps and smooth the transition from left‑to‑right thrust.  
+
+4. **Action 2 (accelerate right) unchanged** – `params[4]=2.0` and `params[5]=2.0` are the values that yielded the best observed reward (‑118.40). Keeping these at the proven sweet‑spot preserves the strong drive to the right once the car has built enough momentum.  
+
+5. **Step‑size consistency** – All modifications respect the required exploration granularity of 1.0 (we moved from the all‑zero baseline to 1.0/0.5 for the coast action), staying within the “integer‑step” search regime while still exploring a new region of the parameter space.  
+
+By preserving the already‑optimal components (biases, right‑action weights) and only adding a small, well‑controlled dependence for the coast action, this configuration is designed to keep the aggressive left/right thrust that works, while giving the policy a finer “neutral” decision surface that can cut a few steps off the trajectory. If the added `params[2]` and `params[3]` help the car to coast at the right moments, the total accumulated reward should drop below the current best (i.e., become *less* negative), moving us toward the minimal total reward we are seeking.
+response: **Proposed parameters (new, never used before)**  
+[]
+3th trial attempt failed with error in training: 
+Updating the policy...
+Num trajs in buffer: 48
+Num params in buffer: 38
+response-og: params[0]: 0.0, params[1]: -1.0, params[2]: 0.0, params[3]: 0.0, params[4]: 2.5, params[5]: 2.5, params[6]: 0.0, params[7]: -5.0, params[8]: 0.0  
+I kept the left‑action weights (params[0], params[1]) simple (zero on position, modest negative on velocity) so that action 0 is selected when the car is moving left. I raised the right‑action weights (params[4], params[5]) from 2 to 2.5 to give a stronger push toward the goal once the car’s position or velocity becomes positive, while leaving the neutral action bias (params[7]) strongly negative (‑5) to discourage staying idle. This should accelerate the climb out of the valley and reduce the number of steps needed, aiming for a reward better than the current best (~‑118).
+response: params[0]: 0.0, params[1]: -1.0, params[2]: 0.0, params[3]: 0.0, params[4]: 2.5, params[5]: 2.5, params[6]: 0.0, params[7]: -5.0, params[8]: 0.0  
+[0.0, -1.0, 0.0, 0.0, 2.5, 2.5, 0.0, -5.0, 0.0]
+(3, 3)
+(9,)
+(3, 3)
+Policy updated!
+Rolling out episode 28...
+Results: [-88.0, -88.0, -152.0, -153.0, -152.0, -100.0, -99.0, -86.0, -159.0, -115.0, -87.0, -86.0, -95.0, -152.0, -154.0, -155.0, -87.0, -159.0, -90.0, -93.0]
+4th trial attempt succeeded in training
+Episode: 29
+Creating log directory: ablation-logs/mcd-logs/B5R65/trial_2/episode_29
+Updating the policy...
+Num trajs in buffer: 49
+Num params in buffer: 38
+response-og: 0 -1 0 0 3.5 3.5 0 -5 0
+response: 0 -1 0 0 3.5 3.5 0 -5 0
+[0.0, -1.0, 0.0, 0.0, 3.5, 3.5, 0.0, -5.0, 0.0]
+(3, 3)
+(9,)
+(3, 3)
+Policy updated!
+Rolling out episode 29...
+Results: [-86.0, -154.0, -95.0, -152.0, -87.0, -153.0, -87.0, -154.0, -154.0, -92.0, -88.0, -155.0, -158.0, -154.0, -158.0, -86.0, -92.0, -154.0, -166.0, -154.0]
+1th trial attempt succeeded in training
+Episode: 30
+Creating log directory: ablation-logs/mcd-logs/B5R65/trial_2/episode_30
+Updating the policy...
+Num trajs in buffer: 50
+Num params in buffer: 39
+response-og: params[0]: 0, params[1]: -1.5, params[2]: 0, params[3]: 0, params[4]: 2.5, params[5]: 2.5, params[6]: 0, params[7]: -5, params[8]: 0
+I kept the right‑action weights (2.5, 2.5) which have shown near‑optimal performance, and increased the left‑action velocity weight from –1 to –1.5 to provide a stronger left push when the car’s velocity is negative, hoping to build momentum faster while leaving the bias terms unchanged.
+response: params[0]: 0, params[1]: -1.5, params[2]: 0, params[3]: 0, params[4]: 2.5, params[5]: 2.5, params[6]: 0, params[7]: -5, params[8]: 0
+[0.0, -1.5, 0.0, 0.0, 2.5, 2.5, 0.0, -5.0, 0.0]
+(3, 3)
+(9,)
+(3, 3)
+Policy updated!
+Rolling out episode 30...
+Results: [-87.0, -87.0, -88.0, -164.0, -200.0, -161.0, -154.0, -153.0, -161.0, -153.0, -164.0, -154.0, -180.0, -156.0, -88.0, -154.0, -174.0, -157.0, -179.0, -160.0]
+1th trial attempt succeeded in training
+Episode: 31
+Creating log directory: ablation-logs/mcd-logs/B5R65/trial_2/episode_31
+Updating the policy...
+Num trajs in buffer: 51
+Num params in buffer: 40
+response-og: params[0]: -0.5; params[1]: -1.0; params[2]: 0.0; params[3]: 0.0; params[4]: 2.5; params[5]: 2.5; params[6]: 0.0; params[7]: -5.0; params[8]: 0.0
+I kept the effective structure that worked well (zero weights for the no‑acceleration action and a strong -5 bias to suppress it) and focused on tuning the left and right actions. The best previous runs used p1≈-1 and p4=p5≈2.5, so I retain those. I added a modest negative position weight for the left action (p0=-0.5) to let left acceleration also depend on the car’s position, which should help build momentum earlier in the valley, while keeping p1 at -1 to react to negative velocity. All other parameters stay unchanged, exploring a promising nearby region that may improve the reward beyond -117.5.
+response: params[0]: -0.5; params[1]: -1.0; params[2]: 0.0; params[3]: 0.0; params[4]: 2.5; params[5]: 2.5; params[6]: 0.0; params[7]: -5.0; params[8]: 0.0
+[-0.5, -1.0, 0.0, 0.0, 2.5, 2.5, 0.0, -5.0, 0.0]
+(3, 3)
+(9,)
+(3, 3)
+Policy updated!
+Rolling out episode 31...
+Results: [-200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0]
+1th trial attempt succeeded in training
+Episode: 32
+Creating log directory: ablation-logs/mcd-logs/B5R65/trial_2/episode_32
+Updating the policy...
+Num trajs in buffer: 52
+Num params in buffer: 41
+response-og: **Proposed parameters**
+
+```
+params[0]: 0
+params[1]: -1
+params[2]: 0
+params[3]: 0
+params[4]: 2.6
+params[5]: 2.6
+params[6]: 0
+params[7]: -5
+params[8]: 0
+```
+
+**Why this might improve performance**
+
+The current best policy uses `params[1] = -1` (velocity weight for the left‑acceleration action) and `params[4] = params[5] = 2.5` (position/velocity weights for the right‑acceleration action), yielding a reward around **‑117.5**.  
+
+* **Fine‑tuning the right‑acceleration weights:**  
+  By increasing both `params[4]` and `params[5]` slightly (from 2.5 to 2.6) we give the “right” action a modestly stronger response to the car’s position and velocity. This can shift the decision boundary just enough to switch actions at a more optimal point in the swing‑up cycle, potentially reducing the number of steps needed to reach the goal.
+
+* **Keeping other coefficients unchanged:**  
+  All the high‑performing runs keep the left‑action weights (`params[0]`, `params[2]`, `params[3]`) and the bias for the “no‑acceleration” action (`params[7] = -5`) at zero or ‑5, respectively. Retaining these values avoids destabilising the well‑behaved left/right switching already achieved.
+
+The suggested set has not been tried before and respects the exploration step‑size guideline while staying in the promising region of the parameter space.
+response: **Proposed parameters**
+[]
+1th trial attempt failed with error in training: 
+Updating the policy...
+Num trajs in buffer: 52
+Num params in buffer: 41
+response-og: Here is a new set of parameters that should improve on the best‐so‑far solution (which had a score of –117.5).  
+The only change is a small positive bias for the “right‑thrust” action ( B₂ = 0.5 ), which makes the policy switch from left to right slightly earlier without harming the initial left‑push phase.
+
+```
+0.0, -1.0, 0.0, 0.0, 2.5, 2.5, 0.0, -5.0, 0.5
+```
+
+Explanation of the components:
+
+| Index | Meaning                     | Value |
+|-------|----------------------------|-------|
+| 0     | `pos` weight for left thrust | 0.0 |
+| 1     | `vel` weight for left thrust | -1.0 |
+| 2     | `pos` weight for no thrust  | 0.0 |
+| 3     | `vel` weight for no thrust  | 0.0 |
+| 4     | `pos` weight for right thrust| 2.5 |
+| 5     | `vel` weight for right thrust| 2.5 |
+| 6     | bias for left thrust (`B₀` )| 0.0 |
+| 7     | bias for no‑thrust (`B₁` )  | -5.0 |
+| 8     | bias for right thrust (`B₂` )| 0.5 |
+
+**Why this may work better**
+
+* The left‑thrust rule ( score₀ = –1·vel ) remains unchanged, preserving the proven good behaviour of using left thrust while the car is at low or negative velocity.  
+* The right‑thrust rule ( score₂ = 2.5·pos + 2.5·vel + 0.5 ) now has a modest positive offset. At the start (pos ≈ –0.5, vel ≈ 0) the offset is insufficient to outweigh the left thrust, so the initial left‑push phase is unchanged.  
+* As the car climbs back toward higher positions, the added +0.5 shifts the decision boundary leftward, causing the policy to switch to right thrust a few time‑steps earlier. This reduces the number of left‑right oscillations needed to build enough momentum to reach the hilltop, thereby lowering the total episode length (i.e., a lower score).  
+
+Because the bias term `B₂` was never used in any of the previously tried configurations, this vector is a genuine new candidate and has a good chance of beating the current best score of –117.5. If needed, you could further experiment with a slightly larger `B₂` (e.g., 1.0) or with modestly larger right‑thrust weights (e.g., 2.8, 2.8) while keeping the left‑thrust weight at –1.0.
+response: Here is a new set of parameters that should improve on the best‐so‑far solution (which had a score of –117.5).  
+[117.5]
+2th trial attempt failed with error in training: 
+Updating the policy...
+Num trajs in buffer: 52
+Num params in buffer: 41
+response-og: 
+response: 
+[]
+3th trial attempt failed with error in training: 
+Updating the policy...
+Num trajs in buffer: 52
+Num params in buffer: 41
+response-og: **Proposed parameters**
+
+```
+params[0]: 0; params[1]: -1; params[2]: 0; params[3]: 0; params[4]: 3.5; params[5]: 2.5; params[6]: 0; params[7]: -5; params[8]: 0
+```
+
+**Why this set?**  
+The best result so far (‑117.5) used a left‑action weight of (0, ‑1) and a right‑action weight of (2.5, 2.5) with a “no‑op” bias of –5. Those weights give a good balance: the car initially pushes left to gain momentum (‑velocity) and later accelerates right when the linear combination of position + velocity is high enough.
+
+To improve on that, I keep the proven left‑action weights and bias (they correctly trigger the initial left push) and explore a modest increase in the position‑weight of the right‑action (3.5 vs 2.5) while keeping the velocity‑weight at 2.5. A stronger position term should make the policy favor the “accelerate right” action earlier in the climb, potentially reducing the total number of steps. The “no‑op” bias remains –5 to still discourage the idle action except when both acceleration signals are low. This adjustment follows the step‑size = 1.0 exploration rule (adding exactly +1.0 to the right‑action position weight) and has not been tried before.
+response: **Proposed parameters**
+[]
+4th trial attempt failed with error in training: 
+Updating the policy...
+Num trajs in buffer: 52
+Num params in buffer: 41
+response-og: params[0]: 1.0, params[1]: -1.0, params[2]: 0.0, params[3]: 0.0, params[4]: 2.5, params[5]: 2.5, params[6]: 0.0, params[7]: -5.0, params[8]: 0.0  
+I increased the left‑action position weight (params[0]) by one unit while keeping the effective left‑action velocity weight (params[1] = ‑1) that gave the best known performance. The right‑action weights (params[4], params[5] = 2.5) remain at the values that produced the lowest (best) reward so far, and the bias vector stays unchanged (b₁ = ‑5 to suppress the “do‑nothing” action). This slight shift should favor left acceleration early in the episode without disturbing the strong right‑acceleration behavior later, potentially improving the total step count toward the goal.
+response: params[0]: 1.0, params[1]: -1.0, params[2]: 0.0, params[3]: 0.0, params[4]: 2.5, params[5]: 2.5, params[6]: 0.0, params[7]: -5.0, params[8]: 0.0  
+[1.0, -1.0, 0.0, 0.0, 2.5, 2.5, 0.0, -5.0, 0.0]
+(3, 3)
+(9,)
+(3, 3)
+Policy updated!
+Rolling out episode 32...
+Results: [-200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0, -200.0]
+5th trial attempt succeeded in training
+Episode 32 failed to train after 5 attempts
+--- Success: Task 37 completed ---
+--- Shutting down Ollama server (PID: 3009837) ---

@@ -77,6 +77,10 @@ def main():
             config[key] = value
         else:
             print(f"Warning: '{key}' not found in base config. Skipping.", file=sys.stderr)
+            
+    # print("Final configuration:")
+    # for k, v in config.items():
+    #     print(f"  {k}: {v}")
 
 
     if config["task"] in ["cont_space_llm_num_optim", "cont_space_llm_num_optim_rndm_proj", "dist_state_llm_num_optim"]:

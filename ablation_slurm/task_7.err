@@ -1,0 +1,634 @@
+
+=====================================================================
+This module is only for creating or activating Python environments:
+$ mamba create -n myenv -c conda-forge python=3 <package_name>
+$ source activate myenv
+
+Only run "pip install" after activating an environment.
+Running pip without activating an environment is known to cause issues.
+
+To list available environments:
+$ mamba info --envs
+
+Other uses are not tested. More info: https://links.asu.edu/solpy
+=====================================================================
+
+  
+========================================================================
+Loaded: Ollama 0.11.8
+========================================================================
+
+Ollama Host for this session http://sg038:11434
+
+To start the ollama server in the background run
+   ollama-start
+
+To stop the ollama server run
+   ollama-stop
+
+*************************************************
+NOTE Ollama will not run on a login node, start
+an interactive session to run ollama ie
+  interactive -G 1 -t 0-4:00
+That will start an session for 4 hours with a GPU
+*************************************************
+     
+Error: listen tcp 0.0.0.0:11434: bind: address already in use
+/etc/python/sitecustomize.py:117: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  mod = _original_import(name, globals, locals, fromlist, level)
+Traceback (most recent call last):
+  File "/home/mrajanva/props-llm-v1/runner/llm_num_optim_semantics_runner.py", line 136, in run_training_loop
+    cpu_time, api_time, total_episodes, total_steps, total_reward, didToolCall = agent.train_policy(world, curr_episode_dir)
+                                                                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mrajanva/props-llm-v1/agent/llm_num_optim_linear_policy_semantics.py", line 206, in train_policy
+    new_parameter_list, reasoning, api_time, didToolCall = self.llm_brain.llm_update_parameters_num_optim_semantics(
+                                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mrajanva/props-llm-v1/agent/policy/llm_brain_linear_policy.py", line 566, in llm_update_parameters_num_optim_semantics
+    new_parameters_list = parse_parameters(new_parameters_with_reasoning)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mrajanva/props-llm-v1/agent/llm_num_optim_linear_policy_semantics.py", line 179, in parse_parameters
+    assert len(results) == self.rank
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+Traceback (most recent call last):
+  File "/home/mrajanva/props-llm-v1/runner/llm_num_optim_semantics_runner.py", line 136, in run_training_loop
+    cpu_time, api_time, total_episodes, total_steps, total_reward, didToolCall = agent.train_policy(world, curr_episode_dir)
+                                                                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mrajanva/props-llm-v1/agent/llm_num_optim_linear_policy_semantics.py", line 206, in train_policy
+    new_parameter_list, reasoning, api_time, didToolCall = self.llm_brain.llm_update_parameters_num_optim_semantics(
+                                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mrajanva/props-llm-v1/agent/policy/llm_brain_linear_policy.py", line 566, in llm_update_parameters_num_optim_semantics
+    new_parameters_list = parse_parameters(new_parameters_with_reasoning)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mrajanva/props-llm-v1/agent/llm_num_optim_linear_policy_semantics.py", line 179, in parse_parameters
+    assert len(results) == self.rank
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+Traceback (most recent call last):
+  File "/home/mrajanva/props-llm-v1/runner/llm_num_optim_semantics_runner.py", line 136, in run_training_loop
+    cpu_time, api_time, total_episodes, total_steps, total_reward, didToolCall = agent.train_policy(world, curr_episode_dir)
+                                                                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mrajanva/props-llm-v1/agent/llm_num_optim_linear_policy_semantics.py", line 206, in train_policy
+    new_parameter_list, reasoning, api_time, didToolCall = self.llm_brain.llm_update_parameters_num_optim_semantics(
+                                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mrajanva/props-llm-v1/agent/policy/llm_brain_linear_policy.py", line 566, in llm_update_parameters_num_optim_semantics
+    new_parameters_list = parse_parameters(new_parameters_with_reasoning)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mrajanva/props-llm-v1/agent/llm_num_optim_linear_policy_semantics.py", line 179, in parse_parameters
+    assert len(results) == self.rank
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+Traceback (most recent call last):
+  File "/home/mrajanva/props-llm-v1/runner/llm_num_optim_semantics_runner.py", line 136, in run_training_loop
+    cpu_time, api_time, total_episodes, total_steps, total_reward, didToolCall = agent.train_policy(world, curr_episode_dir)
+                                                                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mrajanva/props-llm-v1/agent/llm_num_optim_linear_policy_semantics.py", line 206, in train_policy
+    new_parameter_list, reasoning, api_time, didToolCall = self.llm_brain.llm_update_parameters_num_optim_semantics(
+                                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mrajanva/props-llm-v1/agent/policy/llm_brain_linear_policy.py", line 566, in llm_update_parameters_num_optim_semantics
+    new_parameters_list = parse_parameters(new_parameters_with_reasoning)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mrajanva/props-llm-v1/agent/llm_num_optim_linear_policy_semantics.py", line 179, in parse_parameters
+    assert len(results) == self.rank
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+Traceback (most recent call last):
+  File "/home/mrajanva/props-llm-v1/runner/llm_num_optim_semantics_runner.py", line 136, in run_training_loop
+    cpu_time, api_time, total_episodes, total_steps, total_reward, didToolCall = agent.train_policy(world, curr_episode_dir)
+                                                                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mrajanva/props-llm-v1/agent/llm_num_optim_linear_policy_semantics.py", line 206, in train_policy
+    new_parameter_list, reasoning, api_time, didToolCall = self.llm_brain.llm_update_parameters_num_optim_semantics(
+                                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mrajanva/props-llm-v1/agent/policy/llm_brain_linear_policy.py", line 566, in llm_update_parameters_num_optim_semantics
+    new_parameters_list = parse_parameters(new_parameters_with_reasoning)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mrajanva/props-llm-v1/agent/llm_num_optim_linear_policy_semantics.py", line 179, in parse_parameters
+    assert len(results) == self.rank
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+Traceback (most recent call last):
+  File "/home/mrajanva/props-llm-v1/runner/llm_num_optim_semantics_runner.py", line 136, in run_training_loop
+    cpu_time, api_time, total_episodes, total_steps, total_reward, didToolCall = agent.train_policy(world, curr_episode_dir)
+                                                                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mrajanva/props-llm-v1/agent/llm_num_optim_linear_policy_semantics.py", line 206, in train_policy
+    new_parameter_list, reasoning, api_time, didToolCall = self.llm_brain.llm_update_parameters_num_optim_semantics(
+                                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mrajanva/props-llm-v1/agent/policy/llm_brain_linear_policy.py", line 566, in llm_update_parameters_num_optim_semantics
+    new_parameters_list = parse_parameters(new_parameters_with_reasoning)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mrajanva/props-llm-v1/agent/llm_num_optim_linear_policy_semantics.py", line 179, in parse_parameters
+    assert len(results) == self.rank
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+Traceback (most recent call last):
+  File "/home/mrajanva/props-llm-v1/runner/llm_num_optim_semantics_runner.py", line 136, in run_training_loop
+    cpu_time, api_time, total_episodes, total_steps, total_reward, didToolCall = agent.train_policy(world, curr_episode_dir)
+                                                                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mrajanva/props-llm-v1/agent/llm_num_optim_linear_policy_semantics.py", line 206, in train_policy
+    new_parameter_list, reasoning, api_time, didToolCall = self.llm_brain.llm_update_parameters_num_optim_semantics(
+                                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mrajanva/props-llm-v1/agent/policy/llm_brain_linear_policy.py", line 566, in llm_update_parameters_num_optim_semantics
+    new_parameters_list = parse_parameters(new_parameters_with_reasoning)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mrajanva/props-llm-v1/agent/llm_num_optim_linear_policy_semantics.py", line 179, in parse_parameters
+    assert len(results) == self.rank
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+Traceback (most recent call last):
+  File "/home/mrajanva/props-llm-v1/runner/llm_num_optim_semantics_runner.py", line 136, in run_training_loop
+    cpu_time, api_time, total_episodes, total_steps, total_reward, didToolCall = agent.train_policy(world, curr_episode_dir)
+                                                                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mrajanva/props-llm-v1/agent/llm_num_optim_linear_policy_semantics.py", line 206, in train_policy
+    new_parameter_list, reasoning, api_time, didToolCall = self.llm_brain.llm_update_parameters_num_optim_semantics(
+                                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mrajanva/props-llm-v1/agent/policy/llm_brain_linear_policy.py", line 566, in llm_update_parameters_num_optim_semantics
+    new_parameters_list = parse_parameters(new_parameters_with_reasoning)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mrajanva/props-llm-v1/agent/llm_num_optim_linear_policy_semantics.py", line 179, in parse_parameters
+    assert len(results) == self.rank
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+Traceback (most recent call last):
+  File "/home/mrajanva/props-llm-v1/runner/llm_num_optim_semantics_runner.py", line 136, in run_training_loop
+    cpu_time, api_time, total_episodes, total_steps, total_reward, didToolCall = agent.train_policy(world, curr_episode_dir)
+                                                                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mrajanva/props-llm-v1/agent/llm_num_optim_linear_policy_semantics.py", line 206, in train_policy
+    new_parameter_list, reasoning, api_time, didToolCall = self.llm_brain.llm_update_parameters_num_optim_semantics(
+                                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mrajanva/props-llm-v1/agent/policy/llm_brain_linear_policy.py", line 566, in llm_update_parameters_num_optim_semantics
+    new_parameters_list = parse_parameters(new_parameters_with_reasoning)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mrajanva/props-llm-v1/agent/llm_num_optim_linear_policy_semantics.py", line 179, in parse_parameters
+    assert len(results) == self.rank
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+Traceback (most recent call last):
+  File "/home/mrajanva/props-llm-v1/runner/llm_num_optim_semantics_runner.py", line 136, in run_training_loop
+    cpu_time, api_time, total_episodes, total_steps, total_reward, didToolCall = agent.train_policy(world, curr_episode_dir)
+                                                                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mrajanva/props-llm-v1/agent/llm_num_optim_linear_policy_semantics.py", line 206, in train_policy
+    new_parameter_list, reasoning, api_time, didToolCall = self.llm_brain.llm_update_parameters_num_optim_semantics(
+                                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mrajanva/props-llm-v1/agent/policy/llm_brain_linear_policy.py", line 566, in llm_update_parameters_num_optim_semantics
+    new_parameters_list = parse_parameters(new_parameters_with_reasoning)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mrajanva/props-llm-v1/agent/llm_num_optim_linear_policy_semantics.py", line 179, in parse_parameters
+    assert len(results) == self.rank
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+Traceback (most recent call last):
+  File "/home/mrajanva/props-llm-v1/runner/llm_num_optim_semantics_runner.py", line 136, in run_training_loop
+    cpu_time, api_time, total_episodes, total_steps, total_reward, didToolCall = agent.train_policy(world, curr_episode_dir)
+                                                                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mrajanva/props-llm-v1/agent/llm_num_optim_linear_policy_semantics.py", line 206, in train_policy
+    new_parameter_list, reasoning, api_time, didToolCall = self.llm_brain.llm_update_parameters_num_optim_semantics(
+                                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mrajanva/props-llm-v1/agent/policy/llm_brain_linear_policy.py", line 566, in llm_update_parameters_num_optim_semantics
+    new_parameters_list = parse_parameters(new_parameters_with_reasoning)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mrajanva/props-llm-v1/agent/llm_num_optim_linear_policy_semantics.py", line 179, in parse_parameters
+    assert len(results) == self.rank
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+Traceback (most recent call last):
+  File "/home/mrajanva/props-llm-v1/runner/llm_num_optim_semantics_runner.py", line 136, in run_training_loop
+    cpu_time, api_time, total_episodes, total_steps, total_reward, didToolCall = agent.train_policy(world, curr_episode_dir)
+                                                                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mrajanva/props-llm-v1/agent/llm_num_optim_linear_policy_semantics.py", line 206, in train_policy
+    new_parameter_list, reasoning, api_time, didToolCall = self.llm_brain.llm_update_parameters_num_optim_semantics(
+                                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mrajanva/props-llm-v1/agent/policy/llm_brain_linear_policy.py", line 566, in llm_update_parameters_num_optim_semantics
+    new_parameters_list = parse_parameters(new_parameters_with_reasoning)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mrajanva/props-llm-v1/agent/llm_num_optim_linear_policy_semantics.py", line 179, in parse_parameters
+    assert len(results) == self.rank
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+Traceback (most recent call last):
+  File "/home/mrajanva/props-llm-v1/runner/llm_num_optim_semantics_runner.py", line 136, in run_training_loop
+    cpu_time, api_time, total_episodes, total_steps, total_reward, didToolCall = agent.train_policy(world, curr_episode_dir)
+                                                                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mrajanva/props-llm-v1/agent/llm_num_optim_linear_policy_semantics.py", line 206, in train_policy
+    new_parameter_list, reasoning, api_time, didToolCall = self.llm_brain.llm_update_parameters_num_optim_semantics(
+                                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mrajanva/props-llm-v1/agent/policy/llm_brain_linear_policy.py", line 566, in llm_update_parameters_num_optim_semantics
+    new_parameters_list = parse_parameters(new_parameters_with_reasoning)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mrajanva/props-llm-v1/agent/llm_num_optim_linear_policy_semantics.py", line 179, in parse_parameters
+    assert len(results) == self.rank
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+Traceback (most recent call last):
+  File "/home/mrajanva/props-llm-v1/runner/llm_num_optim_semantics_runner.py", line 136, in run_training_loop
+    cpu_time, api_time, total_episodes, total_steps, total_reward, didToolCall = agent.train_policy(world, curr_episode_dir)
+                                                                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mrajanva/props-llm-v1/agent/llm_num_optim_linear_policy_semantics.py", line 206, in train_policy
+    new_parameter_list, reasoning, api_time, didToolCall = self.llm_brain.llm_update_parameters_num_optim_semantics(
+                                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mrajanva/props-llm-v1/agent/policy/llm_brain_linear_policy.py", line 566, in llm_update_parameters_num_optim_semantics
+    new_parameters_list = parse_parameters(new_parameters_with_reasoning)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mrajanva/props-llm-v1/agent/llm_num_optim_linear_policy_semantics.py", line 179, in parse_parameters
+    assert len(results) == self.rank
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+Traceback (most recent call last):
+  File "/home/mrajanva/props-llm-v1/runner/llm_num_optim_semantics_runner.py", line 136, in run_training_loop
+    cpu_time, api_time, total_episodes, total_steps, total_reward, didToolCall = agent.train_policy(world, curr_episode_dir)
+                                                                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mrajanva/props-llm-v1/agent/llm_num_optim_linear_policy_semantics.py", line 206, in train_policy
+    new_parameter_list, reasoning, api_time, didToolCall = self.llm_brain.llm_update_parameters_num_optim_semantics(
+                                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mrajanva/props-llm-v1/agent/policy/llm_brain_linear_policy.py", line 566, in llm_update_parameters_num_optim_semantics
+    new_parameters_list = parse_parameters(new_parameters_with_reasoning)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mrajanva/props-llm-v1/agent/llm_num_optim_linear_policy_semantics.py", line 179, in parse_parameters
+    assert len(results) == self.rank
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+Traceback (most recent call last):
+  File "/home/mrajanva/props-llm-v1/runner/llm_num_optim_semantics_runner.py", line 136, in run_training_loop
+    cpu_time, api_time, total_episodes, total_steps, total_reward, didToolCall = agent.train_policy(world, curr_episode_dir)
+                                                                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mrajanva/props-llm-v1/agent/llm_num_optim_linear_policy_semantics.py", line 206, in train_policy
+    new_parameter_list, reasoning, api_time, didToolCall = self.llm_brain.llm_update_parameters_num_optim_semantics(
+                                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mrajanva/props-llm-v1/agent/policy/llm_brain_linear_policy.py", line 566, in llm_update_parameters_num_optim_semantics
+    new_parameters_list = parse_parameters(new_parameters_with_reasoning)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mrajanva/props-llm-v1/agent/llm_num_optim_linear_policy_semantics.py", line 179, in parse_parameters
+    assert len(results) == self.rank
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+Traceback (most recent call last):
+  File "/home/mrajanva/props-llm-v1/runner/llm_num_optim_semantics_runner.py", line 136, in run_training_loop
+    cpu_time, api_time, total_episodes, total_steps, total_reward, didToolCall = agent.train_policy(world, curr_episode_dir)
+                                                                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mrajanva/props-llm-v1/agent/llm_num_optim_linear_policy_semantics.py", line 206, in train_policy
+    new_parameter_list, reasoning, api_time, didToolCall = self.llm_brain.llm_update_parameters_num_optim_semantics(
+                                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mrajanva/props-llm-v1/agent/policy/llm_brain_linear_policy.py", line 566, in llm_update_parameters_num_optim_semantics
+    new_parameters_list = parse_parameters(new_parameters_with_reasoning)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mrajanva/props-llm-v1/agent/llm_num_optim_linear_policy_semantics.py", line 179, in parse_parameters
+    assert len(results) == self.rank
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+Traceback (most recent call last):
+  File "/home/mrajanva/props-llm-v1/runner/llm_num_optim_semantics_runner.py", line 136, in run_training_loop
+    cpu_time, api_time, total_episodes, total_steps, total_reward, didToolCall = agent.train_policy(world, curr_episode_dir)
+                                                                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mrajanva/props-llm-v1/agent/llm_num_optim_linear_policy_semantics.py", line 206, in train_policy
+    new_parameter_list, reasoning, api_time, didToolCall = self.llm_brain.llm_update_parameters_num_optim_semantics(
+                                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mrajanva/props-llm-v1/agent/policy/llm_brain_linear_policy.py", line 566, in llm_update_parameters_num_optim_semantics
+    new_parameters_list = parse_parameters(new_parameters_with_reasoning)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mrajanva/props-llm-v1/agent/llm_num_optim_linear_policy_semantics.py", line 179, in parse_parameters
+    assert len(results) == self.rank
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+Traceback (most recent call last):
+  File "/home/mrajanva/props-llm-v1/runner/llm_num_optim_semantics_runner.py", line 136, in run_training_loop
+    cpu_time, api_time, total_episodes, total_steps, total_reward, didToolCall = agent.train_policy(world, curr_episode_dir)
+                                                                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mrajanva/props-llm-v1/agent/llm_num_optim_linear_policy_semantics.py", line 206, in train_policy
+    new_parameter_list, reasoning, api_time, didToolCall = self.llm_brain.llm_update_parameters_num_optim_semantics(
+                                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mrajanva/props-llm-v1/agent/policy/llm_brain_linear_policy.py", line 566, in llm_update_parameters_num_optim_semantics
+    new_parameters_list = parse_parameters(new_parameters_with_reasoning)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mrajanva/props-llm-v1/agent/llm_num_optim_linear_policy_semantics.py", line 179, in parse_parameters
+    assert len(results) == self.rank
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+Traceback (most recent call last):
+  File "/home/mrajanva/props-llm-v1/runner/llm_num_optim_semantics_runner.py", line 136, in run_training_loop
+    cpu_time, api_time, total_episodes, total_steps, total_reward, didToolCall = agent.train_policy(world, curr_episode_dir)
+                                                                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mrajanva/props-llm-v1/agent/llm_num_optim_linear_policy_semantics.py", line 206, in train_policy
+    new_parameter_list, reasoning, api_time, didToolCall = self.llm_brain.llm_update_parameters_num_optim_semantics(
+                                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mrajanva/props-llm-v1/agent/policy/llm_brain_linear_policy.py", line 566, in llm_update_parameters_num_optim_semantics
+    new_parameters_list = parse_parameters(new_parameters_with_reasoning)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mrajanva/props-llm-v1/agent/llm_num_optim_linear_policy_semantics.py", line 179, in parse_parameters
+    assert len(results) == self.rank
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+Traceback (most recent call last):
+  File "/home/mrajanva/props-llm-v1/runner/llm_num_optim_semantics_runner.py", line 136, in run_training_loop
+    cpu_time, api_time, total_episodes, total_steps, total_reward, didToolCall = agent.train_policy(world, curr_episode_dir)
+                                                                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mrajanva/props-llm-v1/agent/llm_num_optim_linear_policy_semantics.py", line 206, in train_policy
+    new_parameter_list, reasoning, api_time, didToolCall = self.llm_brain.llm_update_parameters_num_optim_semantics(
+                                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mrajanva/props-llm-v1/agent/policy/llm_brain_linear_policy.py", line 566, in llm_update_parameters_num_optim_semantics
+    new_parameters_list = parse_parameters(new_parameters_with_reasoning)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mrajanva/props-llm-v1/agent/llm_num_optim_linear_policy_semantics.py", line 179, in parse_parameters
+    assert len(results) == self.rank
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+Traceback (most recent call last):
+  File "/home/mrajanva/props-llm-v1/runner/llm_num_optim_semantics_runner.py", line 136, in run_training_loop
+    cpu_time, api_time, total_episodes, total_steps, total_reward, didToolCall = agent.train_policy(world, curr_episode_dir)
+                                                                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mrajanva/props-llm-v1/agent/llm_num_optim_linear_policy_semantics.py", line 206, in train_policy
+    new_parameter_list, reasoning, api_time, didToolCall = self.llm_brain.llm_update_parameters_num_optim_semantics(
+                                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mrajanva/props-llm-v1/agent/policy/llm_brain_linear_policy.py", line 566, in llm_update_parameters_num_optim_semantics
+    new_parameters_list = parse_parameters(new_parameters_with_reasoning)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mrajanva/props-llm-v1/agent/llm_num_optim_linear_policy_semantics.py", line 179, in parse_parameters
+    assert len(results) == self.rank
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+Traceback (most recent call last):
+  File "/home/mrajanva/props-llm-v1/runner/llm_num_optim_semantics_runner.py", line 136, in run_training_loop
+    cpu_time, api_time, total_episodes, total_steps, total_reward, didToolCall = agent.train_policy(world, curr_episode_dir)
+                                                                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mrajanva/props-llm-v1/agent/llm_num_optim_linear_policy_semantics.py", line 206, in train_policy
+    new_parameter_list, reasoning, api_time, didToolCall = self.llm_brain.llm_update_parameters_num_optim_semantics(
+                                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mrajanva/props-llm-v1/agent/policy/llm_brain_linear_policy.py", line 566, in llm_update_parameters_num_optim_semantics
+    new_parameters_list = parse_parameters(new_parameters_with_reasoning)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mrajanva/props-llm-v1/agent/llm_num_optim_linear_policy_semantics.py", line 179, in parse_parameters
+    assert len(results) == self.rank
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+Traceback (most recent call last):
+  File "/home/mrajanva/props-llm-v1/runner/llm_num_optim_semantics_runner.py", line 136, in run_training_loop
+    cpu_time, api_time, total_episodes, total_steps, total_reward, didToolCall = agent.train_policy(world, curr_episode_dir)
+                                                                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mrajanva/props-llm-v1/agent/llm_num_optim_linear_policy_semantics.py", line 206, in train_policy
+    new_parameter_list, reasoning, api_time, didToolCall = self.llm_brain.llm_update_parameters_num_optim_semantics(
+                                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mrajanva/props-llm-v1/agent/policy/llm_brain_linear_policy.py", line 566, in llm_update_parameters_num_optim_semantics
+    new_parameters_list = parse_parameters(new_parameters_with_reasoning)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mrajanva/props-llm-v1/agent/llm_num_optim_linear_policy_semantics.py", line 179, in parse_parameters
+    assert len(results) == self.rank
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+Traceback (most recent call last):
+  File "/home/mrajanva/props-llm-v1/runner/llm_num_optim_semantics_runner.py", line 136, in run_training_loop
+    cpu_time, api_time, total_episodes, total_steps, total_reward, didToolCall = agent.train_policy(world, curr_episode_dir)
+                                                                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mrajanva/props-llm-v1/agent/llm_num_optim_linear_policy_semantics.py", line 206, in train_policy
+    new_parameter_list, reasoning, api_time, didToolCall = self.llm_brain.llm_update_parameters_num_optim_semantics(
+                                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mrajanva/props-llm-v1/agent/policy/llm_brain_linear_policy.py", line 566, in llm_update_parameters_num_optim_semantics
+    new_parameters_list = parse_parameters(new_parameters_with_reasoning)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mrajanva/props-llm-v1/agent/llm_num_optim_linear_policy_semantics.py", line 179, in parse_parameters
+    assert len(results) == self.rank
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+Traceback (most recent call last):
+  File "/home/mrajanva/props-llm-v1/runner/llm_num_optim_semantics_runner.py", line 136, in run_training_loop
+    cpu_time, api_time, total_episodes, total_steps, total_reward, didToolCall = agent.train_policy(world, curr_episode_dir)
+                                                                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mrajanva/props-llm-v1/agent/llm_num_optim_linear_policy_semantics.py", line 206, in train_policy
+    new_parameter_list, reasoning, api_time, didToolCall = self.llm_brain.llm_update_parameters_num_optim_semantics(
+                                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mrajanva/props-llm-v1/agent/policy/llm_brain_linear_policy.py", line 566, in llm_update_parameters_num_optim_semantics
+    new_parameters_list = parse_parameters(new_parameters_with_reasoning)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mrajanva/props-llm-v1/agent/llm_num_optim_linear_policy_semantics.py", line 179, in parse_parameters
+    assert len(results) == self.rank
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+Traceback (most recent call last):
+  File "/home/mrajanva/props-llm-v1/runner/llm_num_optim_semantics_runner.py", line 136, in run_training_loop
+    cpu_time, api_time, total_episodes, total_steps, total_reward, didToolCall = agent.train_policy(world, curr_episode_dir)
+                                                                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mrajanva/props-llm-v1/agent/llm_num_optim_linear_policy_semantics.py", line 206, in train_policy
+    new_parameter_list, reasoning, api_time, didToolCall = self.llm_brain.llm_update_parameters_num_optim_semantics(
+                                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mrajanva/props-llm-v1/agent/policy/llm_brain_linear_policy.py", line 566, in llm_update_parameters_num_optim_semantics
+    new_parameters_list = parse_parameters(new_parameters_with_reasoning)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mrajanva/props-llm-v1/agent/llm_num_optim_linear_policy_semantics.py", line 179, in parse_parameters
+    assert len(results) == self.rank
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+Traceback (most recent call last):
+  File "/home/mrajanva/props-llm-v1/runner/llm_num_optim_semantics_runner.py", line 136, in run_training_loop
+    cpu_time, api_time, total_episodes, total_steps, total_reward, didToolCall = agent.train_policy(world, curr_episode_dir)
+                                                                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mrajanva/props-llm-v1/agent/llm_num_optim_linear_policy_semantics.py", line 206, in train_policy
+    new_parameter_list, reasoning, api_time, didToolCall = self.llm_brain.llm_update_parameters_num_optim_semantics(
+                                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mrajanva/props-llm-v1/agent/policy/llm_brain_linear_policy.py", line 566, in llm_update_parameters_num_optim_semantics
+    new_parameters_list = parse_parameters(new_parameters_with_reasoning)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mrajanva/props-llm-v1/agent/llm_num_optim_linear_policy_semantics.py", line 179, in parse_parameters
+    assert len(results) == self.rank
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+Traceback (most recent call last):
+  File "/home/mrajanva/props-llm-v1/runner/llm_num_optim_semantics_runner.py", line 136, in run_training_loop
+    cpu_time, api_time, total_episodes, total_steps, total_reward, didToolCall = agent.train_policy(world, curr_episode_dir)
+                                                                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mrajanva/props-llm-v1/agent/llm_num_optim_linear_policy_semantics.py", line 206, in train_policy
+    new_parameter_list, reasoning, api_time, didToolCall = self.llm_brain.llm_update_parameters_num_optim_semantics(
+                                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mrajanva/props-llm-v1/agent/policy/llm_brain_linear_policy.py", line 566, in llm_update_parameters_num_optim_semantics
+    new_parameters_list = parse_parameters(new_parameters_with_reasoning)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mrajanva/props-llm-v1/agent/llm_num_optim_linear_policy_semantics.py", line 179, in parse_parameters
+    assert len(results) == self.rank
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+Traceback (most recent call last):
+  File "/home/mrajanva/props-llm-v1/runner/llm_num_optim_semantics_runner.py", line 136, in run_training_loop
+    cpu_time, api_time, total_episodes, total_steps, total_reward, didToolCall = agent.train_policy(world, curr_episode_dir)
+                                                                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mrajanva/props-llm-v1/agent/llm_num_optim_linear_policy_semantics.py", line 206, in train_policy
+    new_parameter_list, reasoning, api_time, didToolCall = self.llm_brain.llm_update_parameters_num_optim_semantics(
+                                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mrajanva/props-llm-v1/agent/policy/llm_brain_linear_policy.py", line 566, in llm_update_parameters_num_optim_semantics
+    new_parameters_list = parse_parameters(new_parameters_with_reasoning)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mrajanva/props-llm-v1/agent/llm_num_optim_linear_policy_semantics.py", line 179, in parse_parameters
+    assert len(results) == self.rank
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+Traceback (most recent call last):
+  File "/home/mrajanva/props-llm-v1/runner/llm_num_optim_semantics_runner.py", line 136, in run_training_loop
+    cpu_time, api_time, total_episodes, total_steps, total_reward, didToolCall = agent.train_policy(world, curr_episode_dir)
+                                                                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mrajanva/props-llm-v1/agent/llm_num_optim_linear_policy_semantics.py", line 206, in train_policy
+    new_parameter_list, reasoning, api_time, didToolCall = self.llm_brain.llm_update_parameters_num_optim_semantics(
+                                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mrajanva/props-llm-v1/agent/policy/llm_brain_linear_policy.py", line 566, in llm_update_parameters_num_optim_semantics
+    new_parameters_list = parse_parameters(new_parameters_with_reasoning)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mrajanva/props-llm-v1/agent/llm_num_optim_linear_policy_semantics.py", line 179, in parse_parameters
+    assert len(results) == self.rank
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+Traceback (most recent call last):
+  File "/home/mrajanva/props-llm-v1/runner/llm_num_optim_semantics_runner.py", line 136, in run_training_loop
+    cpu_time, api_time, total_episodes, total_steps, total_reward, didToolCall = agent.train_policy(world, curr_episode_dir)
+                                                                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mrajanva/props-llm-v1/agent/llm_num_optim_linear_policy_semantics.py", line 206, in train_policy
+    new_parameter_list, reasoning, api_time, didToolCall = self.llm_brain.llm_update_parameters_num_optim_semantics(
+                                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mrajanva/props-llm-v1/agent/policy/llm_brain_linear_policy.py", line 566, in llm_update_parameters_num_optim_semantics
+    new_parameters_list = parse_parameters(new_parameters_with_reasoning)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mrajanva/props-llm-v1/agent/llm_num_optim_linear_policy_semantics.py", line 179, in parse_parameters
+    assert len(results) == self.rank
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+Traceback (most recent call last):
+  File "/home/mrajanva/props-llm-v1/runner/llm_num_optim_semantics_runner.py", line 136, in run_training_loop
+    cpu_time, api_time, total_episodes, total_steps, total_reward, didToolCall = agent.train_policy(world, curr_episode_dir)
+                                                                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mrajanva/props-llm-v1/agent/llm_num_optim_linear_policy_semantics.py", line 206, in train_policy
+    new_parameter_list, reasoning, api_time, didToolCall = self.llm_brain.llm_update_parameters_num_optim_semantics(
+                                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mrajanva/props-llm-v1/agent/policy/llm_brain_linear_policy.py", line 566, in llm_update_parameters_num_optim_semantics
+    new_parameters_list = parse_parameters(new_parameters_with_reasoning)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mrajanva/props-llm-v1/agent/llm_num_optim_linear_policy_semantics.py", line 179, in parse_parameters
+    assert len(results) == self.rank
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+Traceback (most recent call last):
+  File "/home/mrajanva/.conda/envs/props/lib/python3.11/site-packages/httpx/_transports/default.py", line 101, in map_httpcore_exceptions
+    yield
+  File "/home/mrajanva/.conda/envs/props/lib/python3.11/site-packages/httpx/_transports/default.py", line 250, in handle_request
+    resp = self._pool.handle_request(req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mrajanva/.conda/envs/props/lib/python3.11/site-packages/httpcore/_sync/connection_pool.py", line 256, in handle_request
+    raise exc from None
+  File "/home/mrajanva/.conda/envs/props/lib/python3.11/site-packages/httpcore/_sync/connection_pool.py", line 236, in handle_request
+    response = connection.handle_request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mrajanva/.conda/envs/props/lib/python3.11/site-packages/httpcore/_sync/connection.py", line 101, in handle_request
+    raise exc
+  File "/home/mrajanva/.conda/envs/props/lib/python3.11/site-packages/httpcore/_sync/connection.py", line 78, in handle_request
+    stream = self._connect(request)
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mrajanva/.conda/envs/props/lib/python3.11/site-packages/httpcore/_sync/connection.py", line 124, in _connect
+    stream = self._network_backend.connect_tcp(**kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mrajanva/.conda/envs/props/lib/python3.11/site-packages/httpcore/_backends/sync.py", line 207, in connect_tcp
+    with map_exceptions(exc_map):
+  File "/home/mrajanva/.conda/envs/props/lib/python3.11/contextlib.py", line 158, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "/home/mrajanva/.conda/envs/props/lib/python3.11/site-packages/httpcore/_exceptions.py", line 14, in map_exceptions
+    raise to_exc(exc) from exc
+httpcore.ConnectError: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/mrajanva/.conda/envs/props/lib/python3.11/site-packages/openai/_base_client.py", line 982, in request
+    response = self._client.send(
+               ^^^^^^^^^^^^^^^^^^
+  File "/home/mrajanva/.conda/envs/props/lib/python3.11/site-packages/httpx/_client.py", line 914, in send
+    response = self._send_handling_auth(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mrajanva/.conda/envs/props/lib/python3.11/site-packages/httpx/_client.py", line 942, in _send_handling_auth
+    response = self._send_handling_redirects(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mrajanva/.conda/envs/props/lib/python3.11/site-packages/httpx/_client.py", line 979, in _send_handling_redirects
+    response = self._send_single_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mrajanva/.conda/envs/props/lib/python3.11/site-packages/httpx/_client.py", line 1014, in _send_single_request
+    response = transport.handle_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mrajanva/.conda/envs/props/lib/python3.11/site-packages/httpx/_transports/default.py", line 249, in handle_request
+    with map_httpcore_exceptions():
+  File "/home/mrajanva/.conda/envs/props/lib/python3.11/contextlib.py", line 158, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "/home/mrajanva/.conda/envs/props/lib/python3.11/site-packages/httpx/_transports/default.py", line 118, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.ConnectError: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/mrajanva/props-llm-v1/runner/llm_num_optim_semantics_runner.py", line 136, in run_training_loop
+    cpu_time, api_time, total_episodes, total_steps, total_reward, didToolCall = agent.train_policy(world, curr_episode_dir)
+                                                                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mrajanva/props-llm-v1/agent/llm_num_optim_linear_policy_semantics.py", line 255, in train_policy
+    explanation=self.llm_brain.query_reasoning_llm(prompt)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mrajanva/props-llm-v1/agent/policy/llm_brain_linear_policy.py", line 98, in query_reasoning_llm
+    completion = self.client.chat.completions.create(
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mrajanva/.conda/envs/props/lib/python3.11/site-packages/openai/_utils/_utils.py", line 286, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mrajanva/.conda/envs/props/lib/python3.11/site-packages/openai/resources/chat/completions/completions.py", line 1156, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "/home/mrajanva/.conda/envs/props/lib/python3.11/site-packages/openai/_base_client.py", line 1259, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mrajanva/.conda/envs/props/lib/python3.11/site-packages/openai/_base_client.py", line 1014, in request
+    raise APIConnectionError(request=request) from err
+openai.APIConnectionError: Connection error.
+Traceback (most recent call last):
+  File "/home/mrajanva/props-llm-v1/runner/llm_num_optim_semantics_runner.py", line 136, in run_training_loop
+    cpu_time, api_time, total_episodes, total_steps, total_reward, didToolCall = agent.train_policy(world, curr_episode_dir)
+                                                                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mrajanva/props-llm-v1/agent/llm_num_optim_linear_policy_semantics.py", line 206, in train_policy
+    new_parameter_list, reasoning, api_time, didToolCall = self.llm_brain.llm_update_parameters_num_optim_semantics(
+                                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mrajanva/props-llm-v1/agent/policy/llm_brain_linear_policy.py", line 555, in llm_update_parameters_num_optim_semantics
+    new_parameters_with_reasoning, thinking, didToolCall = self.query_llm()
+                                                           ^^^^^^^^^^^^^^^^
+  File "/home/mrajanva/props-llm-v1/agent/policy/llm_brain_linear_policy.py", line 147, in query_llm
+    self.add_llm_conversation(response, "assistant")
+                              ^^^^^^^^
+UnboundLocalError: cannot access local variable 'response' where it is not associated with a value
+Traceback (most recent call last):
+  File "/home/mrajanva/props-llm-v1/runner/llm_num_optim_semantics_runner.py", line 136, in run_training_loop
+    cpu_time, api_time, total_episodes, total_steps, total_reward, didToolCall = agent.train_policy(world, curr_episode_dir)
+                                                                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mrajanva/props-llm-v1/agent/llm_num_optim_linear_policy_semantics.py", line 206, in train_policy
+    new_parameter_list, reasoning, api_time, didToolCall = self.llm_brain.llm_update_parameters_num_optim_semantics(
+                                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mrajanva/props-llm-v1/agent/policy/llm_brain_linear_policy.py", line 555, in llm_update_parameters_num_optim_semantics
+    new_parameters_with_reasoning, thinking, didToolCall = self.query_llm()
+                                                           ^^^^^^^^^^^^^^^^
+  File "/home/mrajanva/props-llm-v1/agent/policy/llm_brain_linear_policy.py", line 147, in query_llm
+    self.add_llm_conversation(response, "assistant")
+                              ^^^^^^^^
+UnboundLocalError: cannot access local variable 'response' where it is not associated with a value
+Traceback (most recent call last):
+  File "/home/mrajanva/props-llm-v1/runner/llm_num_optim_semantics_runner.py", line 136, in run_training_loop
+    cpu_time, api_time, total_episodes, total_steps, total_reward, didToolCall = agent.train_policy(world, curr_episode_dir)
+                                                                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mrajanva/props-llm-v1/agent/llm_num_optim_linear_policy_semantics.py", line 206, in train_policy
+    new_parameter_list, reasoning, api_time, didToolCall = self.llm_brain.llm_update_parameters_num_optim_semantics(
+                                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mrajanva/props-llm-v1/agent/policy/llm_brain_linear_policy.py", line 555, in llm_update_parameters_num_optim_semantics
+    new_parameters_with_reasoning, thinking, didToolCall = self.query_llm()
+                                                           ^^^^^^^^^^^^^^^^
+  File "/home/mrajanva/props-llm-v1/agent/policy/llm_brain_linear_policy.py", line 147, in query_llm
+    self.add_llm_conversation(response, "assistant")
+                              ^^^^^^^^
+UnboundLocalError: cannot access local variable 'response' where it is not associated with a value
+Traceback (most recent call last):
+  File "/home/mrajanva/props-llm-v1/runner/llm_num_optim_semantics_runner.py", line 136, in run_training_loop
+    cpu_time, api_time, total_episodes, total_steps, total_reward, didToolCall = agent.train_policy(world, curr_episode_dir)
+                                                                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mrajanva/props-llm-v1/agent/llm_num_optim_linear_policy_semantics.py", line 206, in train_policy
+    new_parameter_list, reasoning, api_time, didToolCall = self.llm_brain.llm_update_parameters_num_optim_semantics(
+                                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mrajanva/props-llm-v1/agent/policy/llm_brain_linear_policy.py", line 555, in llm_update_parameters_num_optim_semantics
+    new_parameters_with_reasoning, thinking, didToolCall = self.query_llm()
+                                                           ^^^^^^^^^^^^^^^^
+  File "/home/mrajanva/props-llm-v1/agent/policy/llm_brain_linear_policy.py", line 147, in query_llm
+    self.add_llm_conversation(response, "assistant")
+                              ^^^^^^^^
+UnboundLocalError: cannot access local variable 'response' where it is not associated with a value
+/var/spool/slurmd/job40962032/slurm_script: line 114: kill: (2446225) - No such process

@@ -5,7 +5,7 @@ render_mode: null
 logdir: logs/IDP_PropsP_baseline
 dim_actions: 1
 dim_states: 9
-max_traj_count: 30
+max_traj_count: 70
 max_traj_length: 1000
 max_best_length: 0
 template_dir: agent/policy/templates
@@ -21,5 +21,5 @@ optimum: 10000
 search_step_size: 0.1
 env_desc_file: env_descriptions/inverteddoublependulum.j2
 summary_desc_file: summary_descriptions/inverteddoublependulum_summary.j2
-summary: true
-memory_strategy: best
+summary: false
+memory_strategy: default

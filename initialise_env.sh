@@ -12,3 +12,5 @@ python3 main.py --config configs/invertedpendulum/invertedpendulum_propsp.yaml
 
 
 watch -n 1 -t "myjobs | grep -Ec '^[[:space:]]*[0-9]'"
+
+sinfo -p general --format="%N %G %C %t"

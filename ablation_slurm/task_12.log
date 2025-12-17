@@ -1,0 +1,18 @@
+--- Starting Ollama server on sg239 ---
+--- Assigned Port: 11434 ---
+--- OLLAMA_HOST set to: 0.0.0.0:11434 ---
+--- Checking Ollama status ---
+NAME            ID              SIZE      MODIFIED     
+gpt-oss:120b    f7f8e2f8f4e0    65 GB     7 weeks ago     
+gpt-oss:20b     aa4295ac10c3    13 GB     3 months ago    
+qwen3:14b       bdbd181c33f2    9.3 GB    5 months ago    
+=========================================================================
+SLURM Job Array Task: 12 / 40960024
+Parameters from manifest:
+  Random Seed: 2
+  Config: configs/inverted_double_pendulum/inverteddoublependulum_propsp.yaml
+  Log Directory: ablation-logs/idp-logs/B5R15_summary
+  Summary Flag: true
+  Max Trajectory Count: 15
+  Max Best Length: 5
+=========================================================================

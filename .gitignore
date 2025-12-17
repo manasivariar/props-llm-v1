@@ -3,3 +3,9 @@ plots
 */*/__pycache__/
 */__pycache__/
 /__pycache__/
+*-logs/
+array_logs/
+logs/
+__pycache__/
+*.pyc
+ablation-slurm/
