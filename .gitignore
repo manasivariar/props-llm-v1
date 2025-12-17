@@ -8,4 +8,4 @@ array_logs/
 logs/
 __pycache__/
 *.pyc
-ablation-slurm/
+ablation-slurm
