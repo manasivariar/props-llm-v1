@@ -1,21 +1,22 @@
 #!/bin/bash
-#SBATCH --job-name=ip_bkrk2
-#SBATCH --array=1-5                 # Run 5 parallel jobs
-#SBATCH --nodes=1                    # Each job on a single node
-#SBATCH --ntasks=1                   # Each job is a single task
-#SBATCH --cpus-per-task=4
+#SBATCH --job-name=propsR
+#SBATCH --array=1-5                # Total number of sub-jobs (will be overridden by command line)
+#SBATCH --nodes=1
+#SBATCH --ntasks=1
+#SBATCH --cpus-per-task=2           # Default cores per sub-job (can be overridden with -c)
+#SBATCH --mem=8G
 #SBATCH --gres=gpu:a100:1
 #SBATCH --constraint=a100_80
 #SBATCH --partition=general
-#SBATCH --time=24:00:00
-#SBATCH --mail-type=ALL
+#SBATCH --time=24:00:00             # Wall time for each sub-job
+#SBATCH --mail-type=FAIL
 #SBATCH --mail-user=%u@asu.edu
-#SBATCH --output=ip-logs/run2/slurm/slurm_output_IP_best_5_recent_65/trial_%j_%a.log
-#SBATCH --error=ip-logs/run2/slurm/slurm_output_IP_best_5_recent_65/trial_%j_%a.err
+#SBATCH --output=propsR-log/inverted_double_pendulum/propsR-slurm/task_%a.log
+#SBATCH --error=propsR-log/inverted_double_pendulum/propsR-slurm/task_%a.err
 
 # --- Job Configuration ---
-CONFIG_FILE="configs/invertedpendulum/invertedpendulum_propsp.yaml"
-BASE_LOG_DIR="ip-logs/run2/IP_best_5_recent_65"
+CONFIG_FILE="configs/mountaincar/mountaincar_propsp_reward.yaml"
+BASE_LOG_DIR="propsR-log/mountaincar/mountaincar_propsR_withRange"
 
 # --- Create a unique directory for this specific trial's output ---
 TRIAL_LOG_DIR="${BASE_LOG_DIR}/trial_${SLURM_ARRAY_TASK_ID}"
@@ -23,36 +24,52 @@ mkdir -p "$TRIAL_LOG_DIR"
 
 # --- Load Modules ---
 module load mamba/latest
-module load ollama/0.11.8
+module load ollama/0.12.10
 
 # --- START THE OLLAMA SERVER IN THE BACKGROUND ---
 echo "--- Starting Ollama server on $(hostname) ---"
-export OLLAMA_HOST=0.0.0.0 
+
+# 1. Get a random free port assigned by the OS
+#    This ensures every job on the same node gets a unique port.
+export OLLAMA_PORT=$(python3 -c 'import socket; 
+for p in range(11434, 11535):
+    with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
+        if s.connect_ex(("localhost", p)) != 0:
+            print(p)
+            break
+')
+
+if [ -z "$OLLAMA_PORT" ]; then
+    echo "ERROR: No free ports available in range 11434-11534 on this node."
+    exit 1
+fi
+
+# 2. Configure Ollama to listen on this specific port
+export OLLAMA_HOST="0.0.0.0:$OLLAMA_PORT"
+
+echo "--- Assigned Port: $OLLAMA_PORT ---"
+echo "--- OLLAMA_HOST set to: $OLLAMA_HOST ---"
+
 ollama serve &
 OLLAMA_PID=$! 
 sleep 15
+
 echo "--- Checking Ollama status ---"
 ollama list
 
 # --- Activate Mamba/Conda Environment ---
-# We keep this line, as it's good practice and may set paths
 source activate props
 
-# --- Run the Python Script ---
-echo "--- Starting SLURM Trial ${SLURM_ARRAY_TASK_ID} ---"
-echo "--- Config: ${CONFIG_FILE} ---"
-echo "--- Logging to: ${TRIAL_LOG_DIR} ---"
-
-# --- THIS IS THE MODIFIED EXECUTION LINE ---
-# Use the absolute path to the environment's python
-/home/mrajanva/.conda/envs/props/bin/python3 main.py --config "$CONFIG_FILE" --logdir "$TRIAL_LOG_DIR"
+/home/mrajanva/.conda/envs/props/bin/python3 main.py \
+    --config "$CONFIG_FILE" \
+    --logdir "$TRIAL_LOG_DIR"
 
 # Check exit status
 EXIT_STATUS=$?
 if [ $EXIT_STATUS -ne 0 ]; then
-    echo "--- ERROR: Trial ${SLURM_ARRAY_TASK_ID} failed with exit status ${EXIT_STATUS} ---"
+    echo "--- ERROR: Task $taskid failed with exit status $EXIT_STATUS ---"
 else
-    echo "--- Success: Trial ${SLURM_ARRAY_TASK_ID} completed ---"
+    echo "--- Success: Task $taskid completed ---"
 fi
 
 # --- CLEAN UP: Stop the Ollama server ---

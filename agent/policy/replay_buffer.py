@@ -385,3 +385,36 @@ class EpisodeRewardTrajBuffer:
             table += row.traj_buffer.to_string()
             table += "\n"
         return table
+
+class PredictionBuffer:
+    def __init__(self, max_size):
+        self.buffer = deque(maxlen=1000)
+    
+    def add(self, params, true_reward, pred_reward=None, confidence=None):
+        # We allow None for pred_reward to support Warmup data
+        self.buffer.append((params, true_reward, pred_reward, confidence))
+        
+    def getTopKItems(self, params, k=20):
+        if len(self.buffer) == 0:
+            return []
+        buffer_list = list(self.buffer)
+        buffer_params = np.array([np.array(item[0]).flatten() for item in buffer_list])
+        _, unique_indices = np.unique(buffer_params, axis=0, return_index=True)
+        unique_buffer_params = buffer_params[unique_indices]
+        unique_buffer_list = [buffer_list[i] for i in unique_indices]
+        query_params = np.array(params).flatten()
+        query_norm = np.linalg.norm(query_params)
+        buffer_norms = np.linalg.norm(unique_buffer_params, axis=1)
+        dot_products = unique_buffer_params @ query_params
+        denominator = buffer_norms * query_norm
+        with np.errstate(divide='ignore', invalid='ignore'):
+            similarities = dot_products / denominator
+        similarities = np.nan_to_num(similarities, nan=0.0)
+        k = min(k, len(similarities))
+        if k == len(similarities):
+            top_indices = np.argsort(similarities)[::-1]
+        else:
+            top_indices = np.argpartition(similarities, -k)[-k:]
+            top_indices = top_indices[np.argsort(similarities[top_indices])[::-1]]
+        print(f"Fetched top {len(top_indices)} similar items from replay buffer for current params.")
+        return [unique_buffer_list[i] for i in top_indices]

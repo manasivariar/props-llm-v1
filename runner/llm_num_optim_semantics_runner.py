@@ -139,9 +139,7 @@ def run_training_loop(
                 print(f"{trial_idx + 1}th trial attempt succeeded in training")
                 break
             except Exception as e:
-                print(
-                    f"{trial_idx + 1}th trial attempt failed with error in training: {e}"
-                )
+                print(f"{trial_idx + 1}th trial attempt failed with error in training: {e}")
                 traceback.print_exc()
                 continue
         if trial_idx == 4:

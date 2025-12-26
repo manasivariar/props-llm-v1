@@ -2,9 +2,9 @@ import yaml
 import argparse
 from runner import (
     llm_num_optim_runner,
+    llm_num_optim_semantics_runner,
+    llm_num_optim_reward_runner,
 )
-from runner import llm_num_optim_runner
-from runner import llm_num_optim_semantics_runner
 # import gym_maze
 # import gym_navigation
 from envs import nim, pong
@@ -81,12 +81,13 @@ def main():
     # print("Final configuration:")
     # for k, v in config.items():
     #     print(f"  {k}: {v}")
-
-
+    
     if config["task"] in ["cont_space_llm_num_optim", "cont_space_llm_num_optim_rndm_proj", "dist_state_llm_num_optim"]:
         llm_num_optim_runner.run_training_loop(**config)
     elif config["task"] in ["dist_state_llm_num_optim_semantics", "cont_state_llm_num_optim_semantics"]:
         llm_num_optim_semantics_runner.run_training_loop(**config)
+    elif config["task"] == "reverse_rl":
+        llm_num_optim_reward_runner.run_reverse_rl_loop(**config)
     else:
         raise ValueError(f"Task {config['task']} not recognized.")
 
