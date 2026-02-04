@@ -80,8 +80,6 @@ class LLMNumOptimSemanticAgent:
                 action = np.argmax(action)
                 action = np.array([action])
             
-            # TODO: Hard-coded tanh
-            action = np.tanh(action)
             next_state, reward, done = world.step(action)
             logging_file.write(f"{state.T[0]} | {action[0]} | {reward}\n")
             if record:
@@ -102,7 +100,7 @@ class LLMNumOptimSemanticAgent:
             logging_file = open(logging_filename, "w")
             result = self.rollout_episode(world, logging_file)
             self.replay_buffer.add(
-                np.array(self.policy.get_parameters()).reshape(-1), world.get_accu_reward()
+                np.array(self.policy.get_parameters()).reshape(-1), world.get_accu_reward(), None
             )
             logging_file.close()
             print(f"Result: {result}")
@@ -112,7 +110,13 @@ class LLMNumOptimSemanticAgent:
 
         def parse_parameters(input_text):
             # This regex looks for integers or floating-point numbers (including optional sign)
-            s = input_text.split("\n")[0]
+            print(input_text)
+            s, r = input_text.split("\n")[0], input_text.split("\n")[1]
+            # just match and get the digits from the 2nd line i.e r
+            
+            pred_reward_match = re.search(r'-?\d+\.?\d*', r)
+            if pred_reward_match:
+                pred_reward = float(pred_reward_match.group())
             print("response:", s)
             pattern = re.compile(r"params\[(\d+)\]:\s*([+-]?\d+(?:\.\d+)?)")
             matches = pattern.findall(s)
@@ -123,31 +127,35 @@ class LLMNumOptimSemanticAgent:
                 results.append(float(match[1]))
             print(results)
             assert len(results) == self.rank
-            return np.array(results).reshape(-1)
+            return np.array(results).reshape(-1), pred_reward
 
         def str_nd_examples(replay_buffer: EpisodeRewardBufferNoBias, traj_buffer: ReplayBuffer, n):
 
             all_parameters = []
-            for weights, reward in replay_buffer.buffer:
+            for weights, reward, pred_reward in replay_buffer.buffer:
                 parameters = weights
-                all_parameters.append((parameters.reshape(-1), reward))
+                all_parameters.append((parameters.reshape(-1), reward, pred_reward))
 
             text = ""
             print('Num trajs in buffer:', len(traj_buffer.buffer))
             print('Num params in buffer:', len(all_parameters))
-            for idx, (parameters, reward) in enumerate(all_parameters):
+            for idx, (parameters, reward, pred_reward) in enumerate(all_parameters):
                 l = ""
                 for i in range(n):
                     l += f"params[{i}]: {parameters[i]:.5g}; "
                 fxy = reward
-                l += f"f(params): {fxy:.2f}\n"
+                l += f"f(params): {fxy:.2f}"
+                if pred_reward is not None:
+                    l += f"; f_pred(params): {pred_reward:.2f}\n"
+                else:
+                    l += f"; f_pred(params): N/A\n"
                 # l += f"Trajectory: {traj_buffer.buffer[idx]}\n\n"
                 text += l
             return text
 
         # Update the policy using llm_brain, q_table and replay_buffer
         print("Updating the policy...")
-        new_parameter_list, reasoning, api_time, didToolCall = self.llm_brain.llm_update_parameters_num_optim_semantics(
+        new_parameter_list, pred_reward, reasoning, api_time = self.llm_brain.llm_update_parameters_num_optim_semantics(
             str_nd_examples(self.replay_buffer, self.traj_buffer, self.rank),
             parse_parameters,
             self.training_episodes,
@@ -185,7 +193,7 @@ class LLMNumOptimSemanticAgent:
             results.append(result)
         print(f"Results: {results}")
         result = np.mean(results)
-        self.replay_buffer.add(new_parameter_list, result)
+        self.replay_buffer.add(new_parameter_list, result, pred_reward)
         # self.replay_buffer.sort()
 
         self.training_episodes += 1
@@ -195,7 +203,7 @@ class LLMNumOptimSemanticAgent:
         _total_episodes = self.total_episodes
         _total_steps = self.total_steps
         _total_reward = result
-        return _cpu_time, _api_time, _total_episodes, _total_steps, _total_reward, didToolCall
+        return _cpu_time, _api_time, _total_episodes, _total_steps, _total_reward, pred_reward
     
 
     def evaluate_policy(self, world: BaseWorld, logdir):

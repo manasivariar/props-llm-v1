@@ -125,8 +125,8 @@ class EpisodeRewardBufferNoBias:
     def __init__(self, max_size):
         self.buffer = deque(maxlen=max_size)
     
-    def add(self, weights: np.ndarray, reward):
-        self.buffer.append((weights, reward))
+    def add(self, weights: np.ndarray, reward, pred_reward):
+        self.buffer.append((weights, reward, pred_reward))
     
     def sort(self):
         self.buffer = deque(sorted(self.buffer, key=lambda x: x[1], reverse=False), maxlen=self.buffer.maxlen)
