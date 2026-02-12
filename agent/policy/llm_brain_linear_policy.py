@@ -9,7 +9,6 @@ import google.generativeai as genai
 import anthropic
 import time
 import socket
-from stats.inverted_double_pendulum.idp_stats import evaluate_params
 import json
 # from ollama import chat
 
@@ -23,51 +22,6 @@ class LLMBrain:
         self.llm_si_template = llm_si_template
         self.llm_output_conversion_template = llm_output_conversion_template
         self.llm_conversation = []
-        self.TOOLS = [{
-            "type": "function",
-            "function": {
-                "name": "evaluate_params",
-                "description": (
-                    "Run an evaluation of InvertedDoublePendulum-v5 using a linear policy "
-                    "u = [state[0], state[1], state[2], state[3], state[4], state[5], state[6], state[7], state[8]] @ W + b. "
-                    "W comes from the first 9 numbers; b is the 10th. "
-                    "Returns a SINGLE JSON summary for the iteration, use it to judge and improve the policy.\n\n"
-                    "Output JSON (concise keys):\n"
-                    "- meta: {env, episodes, tol_deg, tol_x}\n"
-                    "- failures: {time_limit, terminated, terminated_truncated, unknown, time_limit_rate}\n"
-                    "- stats: per-metric {median, q1, q3} across episodes. Metrics include:\n"
-                    "  • length, return\n"
-                    "  • upright_score (→1 upright)\n"
-                    "  • tilt1_index, tilt2_index (signed lean in [-1,1])\n"
-                    "  • rms_theta1_deg, rms_theta2_deg; theta1_p95_deg, theta2_p95_deg\n"
-                    "  • drift_x_index ([-1,1]), rms_x, rms_xdot\n"
-                    "  • rms_omega1, rms_omega2_abs; omega1_p95, omega2_abs_p95\n"
-                    "  • zero_cross_rate_theta1, zero_cross_rate_theta2 (oscillation proxies)\n"
-                    "  • mean_abs_u, rms_u, smoothness_u (mean|Δu|), sign_flip_rate_u, saturation_rate_u\n"
-                    "  • corr_theta12, corr_omega12 (coordination)\n"
-                    "  • stable_frac, stable_streak_max (time near setpoint)\n"
-                    "- return_mean: average episodic return.\n\n"
-                    "Notes: No plots. Angles reconstructed from MuJoCo joint states; link-2 absolute angle = phi + theta2."
-                ),
-                "parameters": {
-                    "type": "object",
-                    "properties": {
-                        "params": {
-                            "type": "array",
-                            "minItems": 10,
-                            "maxItems": 10,
-                            "items": {"type": "number"},
-                            "description": (
-                                "Exactly 10 floats for the policy. First 9 → observation weights (W); "
-                                "10th → scalar bias (b)."
-                            )
-                        }
-                    },
-                    "required": ["params"],
-                    "additionalProperties": False
-                }
-            }
-        }]
 
         assert llm_model_name in [
             "o1-preview",
@@ -96,7 +50,7 @@ class LLMBrain:
             self.model_group = "openai"
             if self.llm_model_name == 'gpt-oss:120b':
                 host_node = socket.gethostname()
-                asurite_id = "apoojar4"
+                asurite_id = "mrajanva"
 
                 self.client = OpenAI(
                     base_url=f"http://{asurite_id}@{host_node}:11434/v1",  # Local Ollama API
@@ -108,15 +62,8 @@ class LLMBrain:
     def reset_llm_conversation(self):
         self.llm_conversation = []
 
-    def add_llm_conversation(self, text, role, isTool = False, body = None):
-        # if self.model_group == "gpt-oss":
-        #     message = {"role": role, "content": [text]}
-        #     if tool_name is not None:
-        #         message["tool_name"] = tool_name
-        #     self.llm_conversation.append(message)
-        if isTool:
-            self.llm_conversation.append(body)
-        elif self.model_group == "openai":
+    def add_llm_conversation(self, text, role):
+        if self.model_group == "openai":
             self.llm_conversation.append({"role": role, "content": text})
         elif self.model_group == "anthropic":
             self.llm_conversation.append({"role": role, "content": text})
@@ -127,7 +74,6 @@ class LLMBrain:
         return ", ".join([f"params[{i}]: {p}" for i, p in enumerate(params)])
 
     def query_llm(self):
-        max_iter = [0, []]
         thinking = ""
         for attempt in range(10):
             try:
@@ -135,55 +81,10 @@ class LLMBrain:
                     completion = self.client.chat.completions.create(
                         model=self.llm_model_name,
                         messages=self.llm_conversation,
-                        tools=self.TOOLS,
-                        tool_choice={"type": "function", "name": "evaluate_params"},
-                        # tool_choice="required",
                         extra_body={"reasoning_effort": "medium"}
                     )
                     message = completion.choices[0].message
-                    i=1
-                    tool_calls = message.tool_calls
-                    while tool_calls and i<5:
-                        self.add_llm_conversation("", "", isTool=True, body=message)
-                        for tool_call in tool_calls:
-                            print(f"*** Tool call: {tool_call} ***")
-                            if tool_call.function.name == "evaluate_params":
-                                params = json.loads(tool_call.function.arguments)
-                                tool_response = evaluate_params(**params)
-                                if tool_response.get("return_mean", 0) > max_iter[0]:
-                                    max_iter[0] = tool_response.get("return_mean", 0)
-                                    max_iter[1] = params['params']
-                                    print("MAX_ITER:", max_iter)
-                                self.add_llm_conversation(
-                                    text="",
-                                    isTool=True,
-                                    body={
-                                        "role": "tool",
-                                        "tool_call_id": tool_call.id,
-                                        "content": str(tool_response)
-                                    },
-                                    role="assistant")
-                                completion = self.client.chat.completions.create(
-                                    model=self.llm_model_name,
-                                    messages=self.llm_conversation,
-                                    tools=self.TOOLS,
-                                    tool_choice={"type": "function", "name": "evaluate_params"},
-                                    extra_body={"reasoning_effort": "medium"}
-                                )
-                                response = completion.choices[0].message.content
-                                tool_calls = completion.choices[0].message.tool_calls
-                                didToolCall = True
-                                thinking += "\n\n" + f"Tool Iteration {i}" + "\n" + completion.choices[0].message.to_dict().get("reasoning", "No reasoning found.")
-
-                                print(f"Tool Iteration {i}")
-                        i+=1
-                    if i!=1:
-                        response = self.parse_params(max_iter[1])
-                        print("Parsed best params from tool calls:", response)
-                    else:
-                        response = completion.choices[0].message.content
-                        didToolCall = False
-                        thinking = completion.choices[0].message.reasoning
+                    thinking = completion.choices[0].message.reasoning
 
                 elif self.model_group == "anthropic":
                     message = self.client.messages.create(
@@ -214,7 +115,7 @@ class LLMBrain:
             else:
                 self.add_llm_conversation(response, "model")
 
-            return response, thinking, didToolCall
+            return response, thinking
 
     def query_llm_multiple_response(self, num_responses, temperature):
         for attempt in range(5):
@@ -616,7 +517,7 @@ class LLMBrain:
         self.add_llm_conversation(system_prompt, "user")
 
         api_start_time = time.time()
-        new_parameters_with_reasoning, thinking, didToolCall = self.query_llm()
+        new_parameters_with_reasoning, thinking = self.query_llm()
         api_time = time.time() - api_start_time
 
         # print(system_prompt)
@@ -638,5 +539,4 @@ class LLMBrain:
             + "\n\n\nThinking:\n"
             + thinking,
             api_time,
-            didToolCall,
         )

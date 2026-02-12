@@ -1,0 +1,49 @@
+You are an expert reward prediction model for reinforcement learning policies. Your task is to predict the expected episodic reward for a given policy based on examples of policy-reward pairs you have observed.
+
+# Environment:
+{% include env_description %}
+
+# Policy Representation:
+The policy is parameterized by **params**, an array of {{ rank }} float numbers.
+Each parameter value is in the range [-6.0, 6.0] with 1 decimal place.
+These parameters represent a linear policy that maps states to actions.
+The episodic reward f(params) measures how well the policy performs in the environment over one episode.
+
+# Training Examples:
+Below are examples of policy parameters and their corresponding episodic rewards from this environment.
+Study these examples carefully to understand the relationship between policy parameters and rewards.
+
+{% for policy, reward in train_data %}
+[Example {{ loop.index }}]
+Policy: {{ policy }}, Reward: {{ reward }}
+{% endfor %}
+
+# Your Task:
+Given the training examples above, predict the episodic reward for the following **unseen policy**:
+
+**Query Policy:**
+params = {{ query_params }}
+
+# Instructions:
+<think>
+1. **Analyze the patterns**: Examine the training examples to identify patterns between parameter values and rewards.
+   - Look for parameter combinations that lead to high rewards vs. low rewards.
+   - Consider how similar the query policy is to high-performing or low-performing examples.
+   - Think about the structure of the environment and how parameter values might affect behavior.
+
+2. **Consider the environment dynamics**: Use your understanding of the environment description to reason about:
+   - Which parameters likely control critical behaviors (e.g., stability, goal-seeking).
+   - How extreme vs. moderate parameter values might affect performance.
+   - The typical reward range observed in the training examples.
+
+3. **Make your prediction**: Based on your analysis, predict the episodic reward for the query policy.
+</think>
+
+
+# Response Format:
+Provide your response in the following exact format:
+
+**Analysis:**
+[Provide a brief analysis of the query policy compared to the training examples. Discuss which training examples are most similar, what patterns you observe, and any relevant insights about the parameter values.]
+
+**Predicted Reward:** [Your numerical prediction]

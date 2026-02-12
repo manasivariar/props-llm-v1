@@ -1,0 +1,6 @@
+task: reward_prediction
+gym_env_name: Swimmer-v5
+# Dataset is assumed to be at FINAL_DATASET/hopper_dataset.txt based on env_name parsing
+template_dir: agent/policy/templates
+template_name: reward_prediction.j2
+llm_model_name: gpt-oss:120b
