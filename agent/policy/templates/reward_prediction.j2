@@ -1,0 +1,45 @@
+You are an expert reward prediction model for reinforcement learning policies. Your goal is to predict the expected episodic reward of a given **Target Policy** by analyzing how parameter changes correlate with reward fluctuations in the context examples.
+
+# Environment
+{% include env_description %}
+
+# Policy Representation:
+The policy is parameterized by **params**, an array of {{ rank }} float numbers.
+Each parameter value is in the range [-6.0, 6.0] with 1 decimal place.
+These parameters represent a linear policy that maps states to actions.
+The episodic reward f(params) measures how well the policy performs in the environment over one episode.
+
+# Context Examples (Uniformly Sampled)
+Below are examples of policy parameters and their corresponding episodic rewards from this environment. These examples are sampled uniformly to show you the full range of possible behaviors (Failure -> Mediocre -> Success). Study these examples carefully to understand the relationship between policy parameters and rewards. 
+
+{% for policy, reward in context_data %}
+[Example {{ loop.index }}] Params: {{ policy }}
+Reward: {{ reward }}
+{% endfor %}
+
+# Task
+Given the context examples above, predict the episodic reward for the following unseen **Target Policy**:
+
+1. **Analyze Correlation**: Look at specific indices in the parameter vector. When a value increases or changes sign, does the reward go up or down?
+2. **Predict**: Apply these correlations to the "Target Policy".
+
+# Target Policy (Unseen)
+Params: {{ target_params }}
+
+# Instructions
+<think>
+1. **Analyze the patterns**: Examine the training examples to identify patterns between parameter values and rewards.
+   - Look for parameter combinations that lead to high rewards vs. low rewards.
+   - Think about the structure of the environment and how parameter values might affect behavior.
+2. **Consider the environment dynamics**: Use your understanding of the environment description to reason about:
+   - Which parameters likely control critical behaviors (e.g., stability, goal-seeking).
+   - How extreme vs. moderate parameter values might affect performance.
+3. Identify the "Best", "Average", and "Bad" examples in the context. 
+4. **Make your prediction**: Based on your analysis, predict the episodic reward for the query policy.
+</think>
+
+# Response Format:
+Provide your response in the following exact format:
+
+Analysis: [Your reasoning]
+Predicted Reward: [Your numerical prediction]
