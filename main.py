@@ -1,48 +1,24 @@
 import yaml
 import argparse
-from runner import (
-    llm_num_optim_runner,
-)
-from runner import llm_num_optim_runner
-from runner import llm_num_optim_semantics_runner
-# import gym_maze
-# import gym_navigation
-from envs import nim, pong
 import os
-
+from runner import reward_prediction_runner 
 
 def main():
-    parser = argparse.ArgumentParser()
-    parser.add_argument(
-        "--config",
-        type=str,
-        default="config.yaml",
-        help="Path to the config file",
-    )
-    parser.add_argument(
-        "--logdir",
-        type=str,
-        default=None,
-        help="Optional override for logdir from the config file",
-    )
+    parser = argparse.ArgumentParser(description='LLM Agent Runner')
+    parser.add_argument('--config', type=str, required=True, help='Path to configuration file')
     args = parser.parse_args()
 
-    with open(args.config, "r") as f:
+    with open(args.config, 'r') as f:
         config = yaml.safe_load(f)
 
-    # Allow command-line override of logdir used by SLURM job script
-    if args.logdir is not None:
-        config["logdir"] = args.logdir
-    else:
-        os.makedirs(config["logdir"], exist_ok=True)
+    task = config.get('task')
 
-    if config["task"] in ["cont_space_llm_num_optim", "cont_space_llm_num_optim_rndm_proj", "dist_state_llm_num_optim"]:
-        llm_num_optim_runner.run_training_loop(**config)
-    elif config["task"] in ["dist_state_llm_num_optim_semantics", "cont_state_llm_num_optim_semantics"]:
-        llm_num_optim_semantics_runner.run_training_loop(**config)
+    if task == 'reward_prediction':
+        # NEW TASK HANDLER
+        runner = reward_prediction_runner.RewardPredictionRunner(config)
+        runner.run()
     else:
-        raise ValueError(f"Task {config['task']} not recognized.")
-
+        print(f"Unknown task: {task}")
 
 if __name__ == "__main__":
     main()

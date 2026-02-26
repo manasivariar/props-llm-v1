@@ -1,0 +1,40 @@
+You are an expert Reward Estimator for a Reinforcement Learning agent.
+Your goal is to predict the episodic reward of a **Target Policy** by analyzing how parameter changes correlate with reward fluctuations.
+
+# Environment
+{% include env_description %}
+
+# Policy Representation:
+The policy is parameterized by **params**, an array of {{ rank }} float numbers.
+Each parameter value is in the range [-6.0, 6.0] with 1 decimal place.
+These parameters represent a linear policy that maps states to actions.
+The episodic reward f(params) measures how well the policy performs in the environment over one episode.
+
+# Context Examples (Uniformly Sampled across the Reward Landscape)
+Below are historical policies (represented by their PCs) and their actual verified rewards.
+{% for policy, reward in context_data %}
+[Ex {{ loop.index }}] PCs: {{ policy }}
+Reward: {{ reward }}
+{% endfor %}
+
+# Task
+Given the context examples above, predict the episodic reward for the following unseen **Target Policy**:
+
+1. **Analyze Correlation**: Look at specific indices in the parameter vector. When a value increases or changes sign, does the reward go up or down?
+2. **Predict**: Apply these correlations to the "Target Policy".
+
+# Target Policy (Unseen)
+Params: {{ target_params }}
+
+# Instructions
+<think>
+1. **Analyze Correlation**: Examine the Context Examples. How does the reward fluctuate as specific Principal Components increase, decrease, or change signs? 
+2. **Evaluate the Target**: Compare the Target Policy's PCs to the best and worst Context Examples. Is the Target located in a high-reward or low-reward region of the PCA latent space?
+3. **Threshold Analysis**: The highest reward seen in context is **{{ max_context_reward }}**. If you believe this Target aligns perfectly with the high-reward PC patterns, predict a value near or above this threshold.
+</think>
+
+# Response Format:
+Provide your response in the following exact format:
+
+Analysis: [Your reasoning]
+Predicted Reward: [Your numerical prediction]
