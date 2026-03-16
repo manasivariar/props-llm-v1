@@ -1,0 +1,32 @@
+You are an expert software engineer maintaining a programmatic reward model in Python.
+
+# Environment Context
+{% include env_description %}
+
+# Current Reward Function
+```python
+{{ current_code }}
+
+# Test Case Result
+A new Target Policy was evaluated.
+Target Parameters: {{ target_params }}
+
+{% if traceback_error %}
+Your Python code crashed during execution with the following error:
+{{ traceback_error }}
+{% else %}
+Your Code's Predicted Reward: {{ predicted_reward }}
+True Simulator Actual Reward: {{ actual_reward }}
+{% endif %}
+
+# Instructions
+1. Analyze the test case results, especially if there was a discrepancy between the predicted reward and the actual reward.
+2. If there was an error, identify the cause and fix it.
+
+{% if traceback_error %}
+Fix the syntax or runtime error in your code.
+{% else %}
+Evaluate if the prediction error is acceptable. If it is highly inaccurate, modify the mathematical logic or conditionals in the code to account for this edge-case, without breaking the general logic you established.
+{% endif %}
+
+Output the complete, updated `predict_reward(params)` Python function inside ```python ... ``` tags.  

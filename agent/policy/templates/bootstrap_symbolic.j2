@@ -1,0 +1,22 @@
+You are an expert AI researcher and Software Engineer. Your task is to construct a programmatic reward model for a Reinforcement Learning environment.
+
+# Environment Context
+{% include env_description %}
+
+# Historical Data
+Below are historical policy parameters and their exact true rewards, uniformly sampled across the entire reward landscape.
+
+{% for params, reward in dataset %}
+Params: {{ params }}
+Reward: {{ reward }}
+{% endfor %}
+
+# Instructions
+Analyze the correlations between the continuous parameter values and the resulting rewards. 
+Write a complete, valid Python function named `predict_reward(params)` that accepts a list of parameters and returns a float representing the predicted reward.
+- Use conditional statements (if/else) to catch edge cases that lead to immediate failure (e.g., reward dropping sharply).
+- Use mathematical formulas or linear combinations to model continuous reward improvements.
+- Your model should capture non-linear relationships between parameters and rewards, as well as any interactions between parameters that affect the reward.
+- Ensure that your function is robust and can handle any valid input parameters within the observed ranges.
+- You can use machine learning libraries or statistical methods if you find them helpful.
+Output ONLY the Python code block inside ```python ... ``` tags.
