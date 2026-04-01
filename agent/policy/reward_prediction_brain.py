@@ -6,7 +6,7 @@ import google.generativeai as genai
 import anthropic
 from jinja2 import Environment, FileSystemLoader
 
-class SymbolicRewardBrain:
+class StaticFactsheetBrain:
     def __init__(self, llm_model_name: str, template_dir: str, template_name: str):
         self.llm_model_name = llm_model_name
         self.env = Environment(loader=FileSystemLoader(template_dir))
@@ -47,6 +47,7 @@ class SymbolicRewardBrain:
         self.add_llm_conversation(prompt, "user")
         
         response_text = ""
+        reasoning = ""
         for attempt in range(5):
             try:
                 if self.model_group == "openai":
@@ -55,6 +56,7 @@ class SymbolicRewardBrain:
                         messages=self.llm_conversation,
                     )
                     response_text = completion.choices[0].message.content
+                    reasoning = thinking = completion.choices[0].message.to_dict().get("reasoning", "No reasoning found.")
                 elif self.model_group == "anthropic":
                     message = self.client.messages.create(
                         model=self.llm_model_name,
@@ -71,4 +73,4 @@ class SymbolicRewardBrain:
                 print(f"LLM API Error: {e}. Retrying in 10s...")
                 time.sleep(10)
 
-        return prompt, response_text
+        return prompt, response_text, reasoning

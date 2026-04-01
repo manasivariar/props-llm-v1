@@ -42,3 +42,6 @@ sudo killall -s 9 ollama
 kill -9 2580211
 
 do nvidia-smi to see which process is taking GPU memory and kill it using kill -9 2580211
+
+
+python3 factsheet_main.py --config configs/hopper/factsheet_config.yaml --logdir logs/factsheet_hopper_high_100

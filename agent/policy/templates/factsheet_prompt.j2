@@ -1,0 +1,35 @@
+Reasoning: High
+You are an expert Reinforcement Learning Evaluator.
+
+# Environment:
+{% include env_description %}
+
+# Foundation Knowledge Factsheet
+Below is the definitive factsheet describing the mathematical rules and parameter correlations for the target environment. You must use this as your baseline logic.
+<markdown>
+{{ factsheet }}
+</markdown>
+
+# Recent Experiences (Improvisation Context)
+You have evaluated previous policies. Here is how your predictions compared to the actual simulator. 
+Use this data to calibrate and improvise! If your baseline factsheet logic consistently over/underestimates for certain parameter ranges, adjust your final prediction accordingly.
+
+{% if recent_experiences %}
+{% for exp in recent_experiences %}
+[Exp {{ loop.index }}] Params: {{ exp.params }}
+Predicted: {{ exp.predicted }} | Actual: {{ exp.actual }} | Error: {{ exp.error }}
+{% endfor %}
+{% else %}
+(No previous experiences yet. Rely purely on the static factsheet.)
+{% endif %}
+
+# Target Policy (Unseen)
+Target Parameters: {{ target_params }}
+
+# Instructions
+1. Apply the baseline rules from the Factsheet to the Target Parameters.
+2. Review your Recent Experiences. Calibrate your mathematical prediction based on past discrepancies to minimize future error.
+3. Think step-by-step and show your reasoning.
+4. Conclude your response with the exact scalar prediction formatted exactly like this:
+Predicted Reward: [Your Number]
+Analysis: [Your detailed reasoning and calibration process]
