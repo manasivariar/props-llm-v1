@@ -14,12 +14,12 @@ class RewardPredictionRunner:
         if self.env_name == "gym_navigation:navigationtrack": 
             self.env_name = "nav"
             
-        self.dataset_path = f"final_dataset/{self.env_name}_dataset.txt"
-        self.log_base_dir = f"logs/reward_prediction_categorized/{self.env_name}"
+        self.dataset_path = f"FINAL_DATASET/{self.env_name}_dataset.txt"
+        self.log_base_dir = f"logs/baseline_vs_llm/{self.env_name}"
         
         os.makedirs(self.log_base_dir, exist_ok=True)
         
-        self.agent = RewardPredictionAgent(config)
+        self.agent = RewardPredictionAgent(config, self.log_base_dir)
 
     def load_dataset(self):
         data = []
@@ -99,7 +99,7 @@ class RewardPredictionRunner:
             print(f"--- Iteration {iteration}/{len(test_data)} ---")
 
             # Predict
-            prompt, raw_response, thinking, predicted_reward = self.agent.predict_reward(train_data, query_params)
+            prompt, raw_response, thinking, predicted_reward = self.agent.predict_reward(train_data, query_params, iteration, actual_reward)
 
             # Logging
             iter_dir = os.path.join(self.log_base_dir, f"iteration{iteration}")

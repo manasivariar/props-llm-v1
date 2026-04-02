@@ -18,7 +18,7 @@ sinfo -p general --format="%N %G %C %t"
 module load ollama/0.12.3
 export OLLAMA_MODULES=/data/datasets/community/ollama
 OLLAMA_CONTEXT_LENGTH=131072 OLLAMA_KEEP_ALIVE=-1 ollama serve
-export OLLAMA_HOST=10.139.126.12:11434
+export OLLAMA_HOST=10.139.126.7:11434
 
  SDL_AUDIODRIVER=dummy python3 main.py --config configs/cartpole/cartpole_props+.yaml
 

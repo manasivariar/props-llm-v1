@@ -4,3 +4,4 @@ gym_env_name: Swimmer-v5
 template_dir: agent/policy/templates
 template_name: reward_prediction.j2
 llm_model_name: gpt-oss:120b
+rank: 18

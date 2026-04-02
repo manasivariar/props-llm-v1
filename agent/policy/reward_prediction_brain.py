@@ -26,7 +26,7 @@ class RewardPredictionBrain:
                 host_node = socket.gethostname()
                 asurite_id = "mrajanva"
                 self.client = OpenAI(
-                    base_url=f"http://{asurite_id}@{host_node}:11436/v1",
+                    base_url=f"http://{asurite_id}@{host_node}:11434/v1",
                     api_key="ollama"              
                 )
             else:
